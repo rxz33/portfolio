@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rashi Gupta | Portfolio</title>
+  <meta name="description" content="Full-stack developer portfolio — projects, skills, and links." />
+  <style>
+    :root { --bg:#0b1020; --card:#101a33; --txt:#e9eeff; --muted:#a9b3d6; --accent:#7c5cff; }
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(1200px 600px at 20% 0%, #1a2a66 0%, var(--bg) 55%);color:var(--txt);}
+    .wrap{max-width:900px;margin:0 auto;padding:48px 18px;}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,.35);}
+    h1{margin:0 0 6px;font-size:34px;letter-spacing:.2px;}
+    .sub{margin:0 0 18px;color:var(--muted);line-height:1.5;}
+    .row{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 8px;}
+    a.btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.14);text-decoration:none;color:var(--txt);background:rgba(16,26,51,.55);}
+    a.btn:hover{border-color:rgba(124,92,255,.6);box-shadow:0 0 0 3px rgba(124,92,255,.18) inset;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px;}
+    .p{padding:16px;border-radius:16px;background:rgba(16,26,51,.45);border:1px solid rgba(255,255,255,.10);}
+    .p h3{margin:0 0 6px;font-size:16px}
+    .p p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.45}
+    .tags{font-size:12px;color:var(--muted)}
+    footer{margin-top:16px;color:var(--muted);font-size:12px}
+    .accent{color:var(--accent)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Rashi Gupta</h1>
+      <p class="sub">
+        CSE student focused on <span class="accent">full-stack development</span> and building deployable, real-world web apps.
+        Exploring LLM APIs for automation and personalization.
+      </p>
+
+      <div class="row">
+        <a class="btn" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="mailto:YOUR_EMAIL">Email</a>
+        <!-- Optional: add resume link if you upload it somewhere public -->
+        <!-- <a class="btn" href="RESUME_LINK" target="_blank" rel="noreferrer">Resume</a> -->
+      </div>
+
+      <div class="grid">
+        <div class="p">
+          <h3>InterQ — AI Interview Generator</h3>
+          <p>Generates interview questions and responses using an LLM-powered backend with a React frontend. Deployed end-to-end.</p>
+          <div class="row">
+            <a class="btn" href="LIVE_LINK_IF_ANY" target="_blank" rel="noreferrer">Live</a>
+            <a class="btn" href="REPO_LINK" target="_blank" rel="noreferrer">Repo</a>
+          </div>
+          <div class="tags">React • Backend APIs • Deployment</div>
+        </div>
+
+        <div class="p">
+          <h3>Project 2 — (Your Best One)</h3>
+          <p>One-line problem → one-line solution. Mention key tech + outcome.</p>
+          <div class="row">
+            <a class="btn" href="LIVE_LINK_IF_ANY" target="_blank" rel="noreferrer">Live</a>
+            <a class="btn" href="REPO_LINK" target="_blank" rel="noreferrer">Repo</a>
+          </div>
+          <div class="tags">Tech1 • Tech2 • Tech3</div>
+        </div>
+
+        <div class="p">
+          <h3>Project 3 — (Optional)</h3>
+          <p>Keep it short. Recruiters just want proof + links.</p>
+          <div class="row">
+            <a class="btn" href="LIVE_LINK_IF_ANY" target="_blank" rel="noreferrer">Live</a>
+            <a class="btn" href="REPO_LINK" target="_blank" rel="noreferrer">Repo</a>
+          </div>
+          <div class="tags">Tech1 • Tech2</div>
+        </div>
+      </div>
+
+      <footer>
+        Tip: Put this link on your resume instead of Linktree: <span class="accent">https://&lt;username&gt;.github.io</span>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
