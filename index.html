@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Rashi Gupta — Software Engineer</title>
 
@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
     rel="stylesheet"
   />
 
@@ -19,18 +19,24 @@
 
     :root{
 
-      --text:#1e293b;
-      --muted:#64748b;
+      --text:#142033;
+      --muted:#5f6c83;
 
-      --blue:#69b8ff;
-      --lavender:#9b8cff;
+      --blue:#5daeff;
+      --lavender:#9485ff;
+
+      --blue-soft:#dff1ff;
+      --lavender-soft:#efe8ff;
 
       --border:#dbe7f3;
 
-      --card:rgba(255,255,255,.72);
+      --card:rgba(255,255,255,.76);
 
       --shadow:
-        0 10px 30px rgba(90,110,140,.08);
+        0 10px 35px rgba(92,114,148,.08);
+
+      --hover:
+        0 20px 50px rgba(92,114,148,.14);
     }
 
     *{
@@ -52,48 +58,51 @@
       background:
         linear-gradient(
           90deg,
-          #dff2ff 0%,
+          #def2ff 0%,
           #f7f8fc 50%,
           #efe8ff 100%
         );
 
       color:var(--text);
 
-      -webkit-font-smoothing:antialiased;
-
       line-height:1.7;
+
+      -webkit-font-smoothing:antialiased;
     }
 
     .container{
 
-      max-width:1120px;
+      max-width:1180px;
 
       margin:auto;
 
-      padding:90px 24px 80px;
+      padding:90px 24px 100px;
     }
 
     /* ================= HERO ================= */
 
     .hero{
 
-      display:flex;
-      flex-direction:column;
+      display:grid;
 
-      gap:26px;
+      grid-template-columns:1.1fr .9fr;
 
-      margin-bottom:110px;
+      gap:60px;
+
+      align-items:center;
+
+      margin-bottom:120px;
     }
 
     .badge{
 
       width:fit-content;
 
-      padding:10px 18px;
+      padding:11px 18px;
 
       border-radius:999px;
 
-      background:rgba(255,255,255,.65);
+      background:rgba(255,255,255,.72);
 
       border:1px solid #cfe2ff;
 
@@ -101,11 +110,11 @@
 
       font-size:12px;
 
-      font-weight:500;
+      font-weight:600;
 
-      letter-spacing:.02em;
+      letter-spacing:.04em;
 
-      backdrop-filter:blur(10px);
+      margin-bottom:28px;
 
       box-shadow:var(--shadow);
     }
@@ -113,38 +122,40 @@
     h1{
 
       font-family:
-        "Manrope",
+        "Plus Jakarta Sans",
         sans-serif;
 
-      font-size:58px;
+      font-size:68px;
 
-      line-height:1.02;
+      line-height:1;
 
-      font-weight:600;
+      font-weight:700;
 
-      letter-spacing:-0.05em;
+      letter-spacing:-0.06em;
 
-      color:#1e293b;
+      color:#101827;
 
-      opacity:.95;
+      margin-bottom:28px;
+
+      max-width:720px;
     }
 
     .hero p{
 
-      max-width:760px;
-
-      font-size:18px;
+      font-size:19px;
 
       line-height:1.9;
 
-      font-weight:400;
-
       color:var(--muted);
+
+      max-width:720px;
+
+      margin-bottom:34px;
     }
 
     .highlight{
 
-      color:#4f46e5;
+      color:#4254e6;
 
       font-weight:600;
     }
@@ -156,41 +167,38 @@
       gap:14px;
 
       flex-wrap:wrap;
-
-      margin-top:4px;
     }
 
     .btn{
 
       text-decoration:none;
 
-      padding:13px 20px;
+      padding:14px 20px;
 
-      border-radius:14px;
+      border-radius:16px;
 
-      background:rgba(255,255,255,.72);
+      background:rgba(255,255,255,.76);
 
       border:1px solid var(--border);
 
-      color:#334155;
+      color:#243042;
 
       font-size:13px;
 
-      font-weight:500;
+      font-weight:600;
 
       transition:.22s ease;
 
-      backdrop-filter:blur(10px);
-
-      box-shadow:
-        0 8px 24px rgba(120,140,170,.06);
+      box-shadow:var(--shadow);
     }
 
     .btn:hover{
 
       transform:translateY(-2px);
 
-      border-color:#b7d6ff;
+      border-color:#bad8ff;
+
+      box-shadow:var(--hover);
     }
 
     .btn.primary{
@@ -198,8 +206,8 @@
       background:
         linear-gradient(
           135deg,
-          #69b8ff,
-          #9b8cff
+          var(--blue),
+          var(--lavender)
         );
 
       color:white;
@@ -207,26 +215,152 @@
       border:none;
     }
 
+    /* ================= RIGHT PANEL ================= */
+
+    .hero-panel{
+
+      background:rgba(255,255,255,.62);
+
+      backdrop-filter:blur(12px);
+
+      border:1px solid rgba(255,255,255,.8);
+
+      border-radius:32px;
+
+      padding:30px;
+
+      box-shadow:var(--shadow);
+    }
+
+    .panel-grid{
+
+      display:grid;
+
+      grid-template-columns:1fr 1fr;
+
+      gap:18px;
+    }
+
+    .mini{
+
+      padding:24px;
+
+      border-radius:24px;
+
+      background:#f8fbff;
+
+      border:1px solid #dce9f8;
+    }
+
+    .mini:nth-child(2){
+      background:#f6f2ff;
+    }
+
+    .mini h4{
+
+      font-size:13px;
+
+      color:#5b5fe8;
+
+      margin-bottom:16px;
+
+      font-weight:700;
+    }
+
+    .mini h3{
+
+      font-family:
+        "Plus Jakarta Sans",
+        sans-serif;
+
+      font-size:28px;
+
+      line-height:1.15;
+
+      margin-bottom:14px;
+
+      letter-spacing:-0.04em;
+    }
+
+    .mini p{
+
+      color:#64748b;
+
+      font-size:14px;
+
+      line-height:1.8;
+    }
+
+    .bottom-panel{
+
+      margin-top:18px;
+
+      padding:24px;
+
+      border-radius:24px;
+
+      background:white;
+
+      border:1px solid #dce9f8;
+    }
+
+    .bottom-panel h5{
+
+      font-size:13px;
+
+      color:#5b5fe8;
+
+      margin-bottom:16px;
+
+      font-weight:700;
+    }
+
+    .panel-tags{
+
+      display:flex;
+
+      flex-wrap:wrap;
+
+      gap:12px;
+    }
+
+    .panel-tag{
+
+      padding:10px 16px;
+
+      border-radius:999px;
+
+      background:#f8fbff;
+
+      border:1px solid var(--border);
+
+      color:#4f5f78;
+
+      font-size:13px;
+
+      font-weight:500;
+    }
+
     /* ================= SECTION ================= */
 
     .section{
 
-      margin-top:90px;
+      margin-top:100px;
     }
 
     .section-title{
 
-      font-size:11px;
+      font-size:12px;
 
       text-transform:uppercase;
 
       letter-spacing:.24em;
 
-      color:#7c8aa5;
+      color:#7d8ca6;
 
-      font-weight:600;
+      font-weight:700;
 
-      margin-bottom:28px;
+      margin-bottom:30px;
     }
 
     /* ================= PROJECTS ================= */
@@ -235,20 +369,20 @@
 
       display:grid;
 
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 
-      gap:22px;
+      gap:24px;
     }
 
     .card{
 
       background:var(--card);
 
-      border:1px solid rgba(255,255,255,.85);
+      border:1px solid rgba(255,255,255,.82);
 
-      border-radius:28px;
+      border-radius:30px;
 
-      padding:28px;
+      padding:30px;
 
       backdrop-filter:blur(12px);
 
@@ -259,35 +393,37 @@
 
     .card:hover{
 
-      transform:translateY(-4px);
+      transform:translateY(-5px);
+
+      box-shadow:var(--hover);
     }
 
     .card h3{
 
       font-family:
-        "Manrope",
+        "Plus Jakarta Sans",
         sans-serif;
 
-      font-size:20px;
+      font-size:24px;
 
-      font-weight:600;
+      font-weight:700;
 
-      color:#1e293b;
+      letter-spacing:-0.04em;
 
-      margin-bottom:14px;
+      margin-bottom:16px;
+
+      color:#152132;
     }
 
     .card p{
 
-      font-size:14px;
+      font-size:15px;
 
       line-height:1.9;
 
-      font-weight:400;
-
       color:#64748b;
 
-      margin-bottom:22px;
+      margin-bottom:24px;
     }
 
     .project-links{
@@ -311,31 +447,33 @@
 
       border:1px solid var(--border);
 
-      color:#334155;
+      color:#233044;
 
       font-size:13px;
 
-      font-weight:500;
+      font-weight:600;
 
       transition:.2s;
     }
 
     .project-links a:hover{
 
-      background:white;
+      border-color:#bdd8ff;
 
-      border-color:#b7d6ff;
+      background:white;
     }
 
     .tech{
 
       margin-top:18px;
 
-      color:#7c8aa5;
-
       font-size:12px;
 
-      font-weight:500;
+      color:#7c8aa5;
+
+      font-weight:600;
+
+      letter-spacing:.02em;
     }
 
     /* ================= STACK ================= */
@@ -351,28 +489,30 @@
 
     .tag{
 
-      padding:11px 16px;
+      padding:12px 18px;
 
       border-radius:999px;
 
-      background:rgba(255,255,255,.72);
+      background:rgba(255,255,255,.76);
 
       border:1px solid var(--border);
 
-      color:#5b6474;
+      color:#536178;
 
       font-size:13px;
 
-      font-weight:500;
+      font-weight:600;
+
+      box-shadow:var(--shadow);
     }
 
     /* ================= FOOTER ================= */
 
     footer{
 
-      margin-top:110px;
+      margin-top:120px;
 
-      padding-top:24px;
+      padding-top:28px;
 
       border-top:1px solid #dbe7f3;
 
@@ -388,10 +528,21 @@
 
       font-size:13px;
 
-      font-weight:500;
+      font-weight:600;
     }
 
     /* ================= MOBILE ================= */
+
+    @media(max-width:980px){
+
+      .hero{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        font-size:52px;
+      }
+    }
 
     @media(max-width:768px){
 
@@ -399,12 +550,12 @@
         padding:70px 18px;
       }
 
-      h1{
-        font-size:42px;
+      .panel-grid{
+        grid-template-columns:1fr;
       }
 
       .hero p{
-        font-size:16px;
+        font-size:17px;
       }
 
       .actions{
@@ -429,53 +580,119 @@
 
     <section class="hero">
 
-      <div class="badge">
-        Software Engineer • Full Stack Development • AI Systems
+      <div>
+
+        <div class="badge">
+          SOFTWARE ENGINEER • FULL STACK • AI SYSTEMS
+        </div>
+
+        <h1>
+          Building AI-driven products with scalable engineering systems.
+        </h1>
+
+        <p>
+          Full Stack Engineer focused on
+          <span class="highlight">AI-powered applications</span>,
+          modern backend architecture, and production-ready web platforms
+          designed for performance, deployment, and real-world workflows.
+        </p>
+
+        <div class="actions">
+
+          <a
+            class="btn primary"
+            href="https://github.com/rxz33"
+            target="_blank"
+          >
+            GitHub
+          </a>
+
+          <a
+            class="btn"
+            href="https://www.linkedin.com/in/rashi-gupta-09b828310/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            class="btn"
+            href="mailto:rashii.gupta.work@gmail.com"
+          >
+            Contact
+          </a>
+
+          <a
+            class="btn"
+            href="https://drive.google.com/file/d/1W9EYlDmc_SyHuthi80NW-QjMkEZRtxrs/view?usp=sharing"
+            target="_blank"
+          >
+            Resume
+          </a>
+
+        </div>
+
       </div>
 
-      <h1>
-        Rashi Gupta
-      </h1>
+      <!-- RIGHT PANEL -->
 
-      <p>
-        Full Stack Engineer focused on building
-        <span class="highlight">AI-powered applications</span>,
-        scalable backend systems, and modern web products with emphasis on
-        clean architecture, performance, and deployment.
-      </p>
+      <div class="hero-panel">
 
-      <div class="actions">
+        <div class="panel-grid">
 
-        <a
-          class="btn primary"
-          href="https://github.com/rxz33"
-          target="_blank"
-        >
-          GitHub
-        </a>
+          <div class="mini">
 
-        <a
-          class="btn"
-          href="https://www.linkedin.com/in/rashi-gupta-09b828310/"
-          target="_blank"
-        >
-          LinkedIn
-        </a>
+            <h4>
+              Focus
+            </h4>
 
-        <a
-          class="btn"
-          href="mailto:rashii.gupta.work@gmail.com"
-        >
-          Contact
-        </a>
+            <h3>
+              AI Product Engineering
+            </h3>
 
-        <a
-          class="btn"
-          href="https://drive.google.com/file/d/1W9EYlDmc_SyHuthi80NW-QjMkEZRtxrs/view?usp=sharing"
-          target="_blank"
-        >
-          Resume
-        </a>
+            <p>
+              Building intelligent applications with scalable backend systems,
+              workflow automation, and modern frontend architecture.
+            </p>
+
+          </div>
+
+          <div class="mini">
+
+            <h4>
+              Specialization
+            </h4>
+
+            <h3>
+              LLM-powered Systems
+            </h3>
+
+            <p>
+              Designing production-ready platforms using AI workflows,
+              adaptive logic, and conversational interfaces.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="bottom-panel">
+
+          <h5>
+            Core Areas
+          </h5>
+
+          <div class="panel-tags">
+
+            <div class="panel-tag">Full Stack Development</div>
+            <div class="panel-tag">AI Applications</div>
+            <div class="panel-tag">Backend Systems</div>
+            <div class="panel-tag">LLM Integrations</div>
+            <div class="panel-tag">Workflow Automation</div>
+
+          </div>
+
+        </div>
 
       </div>
 
@@ -538,7 +755,7 @@
 
           <p>
             AI-driven career guidance platform using adaptive questioning,
-            personalized recommendations, and LLM-powered workflows.
+            recommendation workflows, and LLM-powered personalization systems.
           </p>
 
           <div class="project-links">
@@ -625,6 +842,7 @@
         <div class="tag">MongoDB</div>
         <div class="tag">Docker</div>
         <div class="tag">Tailwind CSS</div>
+        <div class="tag">LangGraph</div>
         <div class="tag">LLM APIs</div>
 
       </div>
@@ -640,7 +858,7 @@
       </div>
 
       <div>
-        Software Engineering • AI Systems
+        Software Engineering • AI Systems • Product Development
       </div>
 
     </footer>
