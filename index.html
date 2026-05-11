@@ -7,11 +7,6 @@
 
   <title>Rashi Gupta — Software Engineer</title>
 
-  <meta
-    name="description"
-    content="Rashi Gupta — Full Stack Engineer focused on AI systems, scalable web applications, and product engineering."
-  />
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -24,26 +19,23 @@
 
     :root{
 
-      --bg:#f4f7fc;
+      --bg:#f5f7fc;
 
       --text:#0f172a;
-      --muted:#5f6b85;
+      --muted:#64748b;
 
-      --blue:#4da8ff;
-      --blue-soft:#dff0ff;
+      --blue:#5aaeff;
+      --blue-soft:#dfefff;
 
-      --lavender:#9d7dff;
-      --lavender-soft:#ece5ff;
+      --lavender:#9c84ff;
+      --lavender-soft:#efe8ff;
 
-      --lilac:#f2ebff;
+      --border:#d9e5f3;
 
-      --border:#d7e4f4;
+      --card:#ffffffc9;
 
       --shadow:
-        0 10px 35px rgba(104,125,160,.10);
-
-      --hover-shadow:
-        0 20px 55px rgba(104,125,160,.16);
+        0 10px 30px rgba(90,110,140,.08);
     }
 
     *{
@@ -66,9 +58,9 @@
       background:
         linear-gradient(
           90deg,
-          #dcefff 0%,
-          #f6f8fc 48%,
-          #eee5ff 100%
+          #dff1ff 0%,
+          #f7f8fc 48%,
+          #eee6ff 100%
         );
 
       color:var(--text);
@@ -78,73 +70,34 @@
     }
 
     .container{
-      max-width:1280px;
+      max-width:1120px;
       margin:auto;
-      padding:42px 24px 80px;
+      padding:42px 24px 90px;
     }
 
-    /* ================= NAVBAR ================= */
+    /* ================= NAV ================= */
 
-    .navbar{
+    .nav{
 
       display:flex;
       justify-content:space-between;
       align-items:center;
 
-      padding:12px 18px;
-
-      border-radius:24px;
-
-      background:rgba(255,255,255,.55);
-
-      backdrop-filter:blur(12px);
-
-      border:1px solid rgba(255,255,255,.8);
-
-      box-shadow:var(--shadow);
-
-      margin-bottom:70px;
-    }
-
-    .logo-wrap{
-      display:flex;
-      align-items:center;
-      gap:16px;
+      margin-bottom:90px;
     }
 
     .logo{
 
-      width:48px;
-      height:48px;
-
-      border-radius:16px;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
-
-      font-weight:800;
       font-size:20px;
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--blue),
-          var(--lavender)
-        );
-
-      color:white;
-    }
-
-    .logo-text{
-      font-size:28px;
       font-weight:700;
+
       color:#111827;
     }
 
     .nav-links{
+
       display:flex;
-      gap:38px;
+      gap:28px;
       align-items:center;
     }
 
@@ -152,8 +105,9 @@
 
       text-decoration:none;
 
-      color:#1e293b;
+      color:#475569;
 
+      font-size:15px;
       font-weight:500;
 
       transition:.2s;
@@ -163,13 +117,107 @@
       color:var(--lavender);
     }
 
-    .resume-btn{
+    /* ================= HERO ================= */
+
+    .hero{
+
+      display:grid;
+
+      grid-template-columns:1fr;
+
+      gap:30px;
+
+      margin-bottom:110px;
+    }
+
+    .badge{
+
+      width:fit-content;
+
+      padding:10px 16px;
+
+      border-radius:999px;
+
+      background:rgba(255,255,255,.65);
+
+      border:1px solid #cfe2ff;
+
+      color:#3f63d8;
+
+      font-size:13px;
+      font-weight:600;
+
+      box-shadow:var(--shadow);
+    }
+
+    h1{
+
+      font-size:88px;
+
+      line-height:.95;
+
+      font-weight:800;
+
+      color:#060b1a;
+
+      letter-spacing:-0.07em;
+
+      max-width:720px;
+    }
+
+    .hero p{
+
+      max-width:760px;
+
+      font-size:22px;
+
+      color:var(--muted);
+    }
+
+    .highlight{
+      color:#4f46e5;
+      font-weight:700;
+    }
+
+    .actions{
+
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+
+      margin-top:10px;
+    }
+
+    .btn{
 
       text-decoration:none;
 
-      padding:14px 24px;
+      padding:14px 20px;
 
-      border-radius:16px;
+      border-radius:14px;
+
+      background:rgba(255,255,255,.72);
+
+      border:1px solid var(--border);
+
+      color:#111827;
+
+      font-size:14px;
+      font-weight:600;
+
+      transition:.22s ease;
+
+      backdrop-filter:blur(8px);
+    }
+
+    .btn:hover{
+
+      border-color:#a5cfff;
+
+      transform:translateY(-2px);
+    }
+
+    .btn.primary{
 
       background:
         linear-gradient(
@@ -178,277 +226,32 @@
           var(--lavender)
         );
 
-      color:white;
-
-      font-weight:600;
-
-      box-shadow:
-        0 12px 24px rgba(120,120,255,.18);
-    }
-
-    /* ================= HERO ================= */
-
-    .hero{
-
-      display:grid;
-
-      grid-template-columns:1.05fr .95fr;
-
-      gap:56px;
-
-      align-items:center;
-    }
-
-    .badge{
-
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-
-      padding:12px 18px;
-
-      border-radius:999px;
-
-      background:rgba(255,255,255,.65);
-
-      border:1px solid #cfe5ff;
-
-      color:#2458d3;
-
-      font-size:14px;
-      font-weight:600;
-
-      margin-bottom:28px;
-
-      box-shadow:var(--shadow);
-    }
-
-    .dot{
-      width:10px;
-      height:10px;
-      border-radius:50%;
-      background:#356dff;
-    }
-
-    h1{
-
-      font-size:88px;
-
-      line-height:.92;
-
-      font-weight:800;
-
-      color:#060b1a;
-
-      letter-spacing:-0.07em;
-
-      margin-bottom:30px;
-    }
-
-    .hero p{
-
-      max-width:700px;
-
-      font-size:22px;
-
-      color:var(--muted);
-
-      margin-bottom:38px;
-    }
-
-    .highlight{
-      color:#4254e6;
-      font-weight:700;
-    }
-
-    .hero-actions{
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-
-    .hero-btn{
-
-      text-decoration:none;
-
-      padding:16px 22px;
-
-      border-radius:18px;
-
-      font-weight:600;
-
-      transition:.25s ease;
-    }
-
-    .hero-btn.primary{
-
-      background:#249dff;
+      border:none;
 
       color:white;
 
       box-shadow:
-        0 10px 24px rgba(36,157,255,.22);
-    }
-
-    .hero-btn.secondary{
-
-      background:rgba(255,255,255,.7);
-
-      border:1px solid var(--border);
-
-      color:#111827;
-    }
-
-    .hero-btn:hover{
-      transform:translateY(-2px);
-    }
-
-    /* ================= HERO CARD ================= */
-
-    .hero-card{
-
-      background:rgba(255,255,255,.52);
-
-      backdrop-filter:blur(12px);
-
-      border-radius:36px;
-
-      padding:26px;
-
-      border:1px solid rgba(255,255,255,.8);
-
-      box-shadow:var(--shadow);
-    }
-
-    .top-grid{
-
-      display:grid;
-
-      grid-template-columns:1fr 1fr;
-
-      gap:18px;
-    }
-
-    .mini-card{
-
-      padding:28px;
-
-      border-radius:28px;
-
-      border:1px solid #d7e4f4;
-    }
-
-    .mini-card.blue{
-      background:#eef7ff;
-    }
-
-    .mini-card.lavender{
-      background:#f3efff;
-    }
-
-    .mini-card small{
-
-      color:#4f46e5;
-
-      font-weight:700;
-
-      font-size:14px;
-    }
-
-    .mini-card h3{
-
-      margin:18px 0 14px;
-
-      font-size:22px;
-
-      line-height:1.35;
-    }
-
-    .mini-card p{
-
-      color:#5f6b85;
-
-      font-size:15px;
-    }
-
-    .bottom-card{
-
-      margin-top:18px;
-
-      background:white;
-
-      border-radius:28px;
-
-      border:1px solid var(--border);
-
-      padding:28px;
-    }
-
-    .bottom-card h4{
-
-      margin-bottom:18px;
-
-      color:#4f46e5;
-
-      font-size:16px;
-    }
-
-    .tag-wrap{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-    }
-
-    .tag{
-
-      padding:12px 18px;
-
-      border-radius:999px;
-
-      background:#f7fbff;
-
-      border:1px solid var(--border);
-
-      color:#475569;
-
-      font-size:14px;
-      font-weight:500;
+        0 10px 24px rgba(110,120,255,.18);
     }
 
     /* ================= SECTION ================= */
 
     .section{
-      margin-top:110px;
+
+      margin-top:90px;
     }
 
-    .section-header{
+    .section-title{
 
-      display:flex;
-      align-items:center;
-      gap:22px;
-
-      margin-bottom:34px;
-    }
-
-    .section-header h2{
-
-      font-size:14px;
-
-      letter-spacing:.22em;
-
-      color:#4254e6;
+      font-size:13px;
 
       text-transform:uppercase;
 
-      white-space:nowrap;
-    }
+      letter-spacing:.18em;
 
-    .line{
+      color:#64748b;
 
-      width:100%;
-      height:1px;
-
-      background:#cbdaf3;
+      margin-bottom:28px;
     }
 
     /* ================= PROJECTS ================= */
@@ -457,81 +260,55 @@
 
       display:grid;
 
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 
       gap:22px;
     }
 
-    .project{
+    .card{
 
-      background:rgba(255,255,255,.65);
+      background:var(--card);
 
-      backdrop-filter:blur(12px);
+      backdrop-filter:blur(10px);
 
-      border-radius:30px;
+      border:1px solid rgba(255,255,255,.8);
+
+      border-radius:28px;
 
       padding:28px;
 
-      border:1px solid rgba(255,255,255,.9);
-
       box-shadow:var(--shadow);
 
-      transition:.28s ease;
+      transition:.25s ease;
     }
 
-    .project:hover{
+    .card:hover{
 
-      transform:translateY(-5px);
-
-      box-shadow:var(--hover-shadow);
+      transform:translateY(-4px);
     }
 
-    .icon{
-
-      width:54px;
-      height:54px;
-
-      border-radius:18px;
-
-      display:flex;
-      align-items:center;
-      justify-content:center;
+    .card h3{
 
       font-size:24px;
 
-      color:white;
-
-      margin-bottom:22px;
-    }
-
-    .icon.blue{
-      background:linear-gradient(135deg,#4da8ff,#78b9ff);
-    }
-
-    .icon.lavender{
-      background:linear-gradient(135deg,#8b6cff,#b08cff);
-    }
-
-    .project h3{
-
-      font-size:22px;
-
       margin-bottom:14px;
+
+      color:#111827;
     }
 
-    .project p{
+    .card p{
+
+      font-size:15px;
 
       color:var(--muted);
 
-      font-size:16px;
-
-      margin-bottom:24px;
+      margin-bottom:22px;
     }
 
     .project-links{
 
       display:flex;
-      gap:14px;
+      gap:12px;
       flex-wrap:wrap;
     }
 
@@ -539,15 +316,15 @@
 
       text-decoration:none;
 
-      padding:12px 18px;
+      padding:11px 16px;
 
-      border-radius:14px;
+      border-radius:12px;
 
       background:#f8fbff;
 
       border:1px solid var(--border);
 
-      color:#111827;
+      color:#0f172a;
 
       font-size:14px;
       font-weight:600;
@@ -559,30 +336,30 @@
 
       background:white;
 
-      border-color:#9ecfff;
+      border-color:#abd4ff;
     }
 
     .tech{
 
-      margin-top:20px;
+      margin-top:18px;
 
       color:#64748b;
 
       font-size:13px;
     }
 
-    /* ================= SKILLS ================= */
+    /* ================= STACK ================= */
 
-    .skills{
+    .stack{
 
       display:flex;
       flex-wrap:wrap;
-      gap:16px;
+      gap:14px;
     }
 
-    .skill{
+    .tag{
 
-      padding:14px 20px;
+      padding:12px 18px;
 
       border-radius:999px;
 
@@ -592,6 +369,7 @@
 
       color:#475569;
 
+      font-size:14px;
       font-weight:500;
 
       box-shadow:var(--shadow);
@@ -603,14 +381,14 @@
 
       margin-top:120px;
 
-      padding-top:34px;
+      padding-top:28px;
 
-      border-top:1px solid #d4e2f5;
+      border-top:1px solid #d9e5f3;
 
       display:flex;
       justify-content:space-between;
       flex-wrap:wrap;
-      gap:14px;
+      gap:12px;
 
       color:#64748b;
 
@@ -619,89 +397,50 @@
 
     /* ================= MOBILE ================= */
 
-    @media(max-width:1050px){
-
-      .hero{
-        grid-template-columns:1fr;
-      }
+    @media(max-width:768px){
 
       h1{
-        font-size:62px;
-      }
-
-      .nav-links{
-        display:none;
-      }
-    }
-
-    @media(max-width:640px){
-
-      .container{
-        padding:24px 18px 60px;
-      }
-
-      h1{
-        font-size:48px;
+        font-size:58px;
       }
 
       .hero p{
         font-size:18px;
       }
 
-      .top-grid{
-        grid-template-columns:1fr;
-      }
-
-      .hero-actions{
+      .nav{
         flex-direction:column;
+        align-items:flex-start;
+        gap:18px;
       }
 
-      .hero-btn{
-        width:100%;
-        text-align:center;
+      .container{
+        padding:28px 18px 70px;
       }
     }
 
   </style>
+
 </head>
 
 <body>
 
   <div class="container">
 
-    <!-- NAVBAR -->
+    <!-- NAV -->
 
-    <nav class="navbar">
+    <nav class="nav">
 
-      <div class="logo-wrap">
-
-        <div class="logo">
-          RG
-        </div>
-
-        <div class="logo-text">
-          Rashi Gupta
-        </div>
-
+      <div class="logo">
+        Rashi Gupta
       </div>
 
       <div class="nav-links">
 
-        <a href="#">About</a>
         <a href="#">Projects</a>
         <a href="#">Skills</a>
-        <a href="#">Experience</a>
         <a href="#">Contact</a>
 
       </div>
-
-      <a
-        class="resume-btn"
-        href="https://drive.google.com/file/d/1W9EYlDmc_SyHuthi80NW-QjMkEZRtxrs/view?usp=sharing"
-        target="_blank"
-      >
-        Resume
-      </a>
 
     </nav>
 
@@ -709,104 +448,53 @@
 
     <section class="hero">
 
-      <div>
-
-        <div class="badge">
-          <div class="dot"></div>
-          Software Engineer • Full Stack Development • AI Systems
-        </div>
-
-        <h1>
-          Rashi Gupta
-        </h1>
-
-        <p>
-          Full Stack Engineer focused on building
-          <span class="highlight">AI-powered products</span>,
-          scalable backend systems, and modern web applications with strong emphasis on performance, deployment, and user experience.
-        </p>
-
-        <div class="hero-actions">
-
-          <a
-            class="hero-btn primary"
-            href="https://github.com/rxz33"
-            target="_blank"
-          >
-            GitHub
-          </a>
-
-          <a
-            class="hero-btn secondary"
-            href="https://www.linkedin.com/in/rashi-gupta-09b828310/"
-            target="_blank"
-          >
-            LinkedIn
-          </a>
-
-          <a
-            class="hero-btn secondary"
-            href="mailto:rashii.gupta.work@gmail.com"
-          >
-            Contact
-          </a>
-
-        </div>
-
+      <div class="badge">
+        Software Engineer • Full Stack Development • AI Systems
       </div>
 
-      <!-- RIGHT PANEL -->
+      <h1>
+        Building modern AI-powered web products.
+      </h1>
 
-      <div class="hero-card">
+      <p>
+        Full Stack Engineer focused on scalable backend systems,
+        clean frontend architecture, and
+        <span class="highlight">AI-driven applications</span>
+        designed for real-world workflows and deployment.
+      </p>
 
-        <div class="top-grid">
+      <div class="actions">
 
-          <div class="mini-card blue">
+        <a
+          class="btn primary"
+          href="https://github.com/rxz33"
+          target="_blank"
+        >
+          GitHub
+        </a>
 
-            <small>What you build</small>
+        <a
+          class="btn"
+          href="https://www.linkedin.com/in/rashi-gupta-09b828310/"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
 
-            <h3>
-              AI-powered products and scalable systems
-            </h3>
+        <a
+          class="btn"
+          href="mailto:rashii.gupta.work@gmail.com"
+        >
+          Contact
+        </a>
 
-            <p>
-              Full stack applications designed with deployment, automation, and real-world workflows in mind.
-            </p>
-
-          </div>
-
-          <div class="mini-card lavender">
-
-            <small>Focus</small>
-
-            <h3>
-              Product engineering with modern AI workflows
-            </h3>
-
-            <p>
-              Combining backend engineering, frontend systems, and LLM integrations into production-ready platforms.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="bottom-card">
-
-          <h4>
-            Core areas
-          </h4>
-
-          <div class="tag-wrap">
-
-            <div class="tag">AI Applications</div>
-            <div class="tag">Full Stack Systems</div>
-            <div class="tag">LLM Integrations</div>
-            <div class="tag">Product Engineering</div>
-
-          </div>
-
-        </div>
+        <a
+          class="btn"
+          href="https://drive.google.com/file/d/1W9EYlDmc_SyHuthi80NW-QjMkEZRtxrs/view?usp=sharing"
+          target="_blank"
+        >
+          Resume
+        </a>
 
       </div>
 
@@ -816,32 +504,23 @@
 
     <section class="section">
 
-      <div class="section-header">
-
-        <h2>
-          Selected Projects
-        </h2>
-
-        <div class="line"></div>
-
+      <div class="section-title">
+        Selected Projects
       </div>
 
       <div class="projects">
 
-        <!-- PROJECT 1 -->
+        <!-- PROJECT -->
 
-        <div class="project">
-
-          <div class="icon blue">
-            ✦
-          </div>
+        <div class="card">
 
           <h3>
             InterQ
           </h3>
 
           <p>
-            AI-powered interview generation platform with dynamic workflows, real-time interaction handling, and scalable deployment architecture.
+            AI-powered interview generation platform with dynamic workflows,
+            real-time interaction handling, and scalable deployment architecture.
           </p>
 
           <div class="project-links">
@@ -863,25 +542,22 @@
           </div>
 
           <div class="tech">
-            React • Backend APIs • AI Integration • Deployment
+            React • APIs • AI Integration • Deployment
           </div>
 
         </div>
 
-        <!-- PROJECT 2 -->
+        <!-- PROJECT -->
 
-        <div class="project">
-
-          <div class="icon lavender">
-            ⌁
-          </div>
+        <div class="card">
 
           <h3>
             PathWise
           </h3>
 
           <p>
-            AI-driven career guidance platform using adaptive questioning, skill analysis, and personalized recommendation workflows powered by LLM APIs.
+            AI-driven career guidance platform using adaptive questioning,
+            personalized recommendations, and LLM-powered workflows.
           </p>
 
           <div class="project-links">
@@ -908,20 +584,17 @@
 
         </div>
 
-        <!-- PROJECT 3 -->
+        <!-- PROJECT -->
 
-        <div class="project">
-
-          <div class="icon lavender">
-            ⛁
-          </div>
+        <div class="card">
 
           <h3>
             AI-First CRM
           </h3>
 
           <p>
-            Conversational CRM platform capable of extracting structured HCP interaction data, compliance validation, and intelligent follow-up generation.
+            Conversational CRM platform for extracting structured interaction data,
+            compliance validation, and intelligent follow-up generation.
           </p>
 
           <div class="project-links">
@@ -952,33 +625,26 @@
 
     </section>
 
-    <!-- SKILLS -->
+    <!-- STACK -->
 
     <section class="section">
 
-      <div class="section-header">
-
-        <h2>
-          Core Technologies
-        </h2>
-
-        <div class="line"></div>
-
+      <div class="section-title">
+        Core Technologies
       </div>
 
-      <div class="skills">
+      <div class="stack">
 
-        <div class="skill">React</div>
-        <div class="skill">Next.js</div>
-        <div class="skill">TypeScript</div>
-        <div class="skill">FastAPI</div>
-        <div class="skill">Node.js</div>
-        <div class="skill">PostgreSQL</div>
-        <div class="skill">MongoDB</div>
-        <div class="skill">Docker</div>
-        <div class="skill">Tailwind CSS</div>
-        <div class="skill">GitHub Actions</div>
-        <div class="skill">LLM APIs</div>
+        <div class="tag">React</div>
+        <div class="tag">Next.js</div>
+        <div class="tag">TypeScript</div>
+        <div class="tag">FastAPI</div>
+        <div class="tag">Node.js</div>
+        <div class="tag">PostgreSQL</div>
+        <div class="tag">MongoDB</div>
+        <div class="tag">Docker</div>
+        <div class="tag">Tailwind CSS</div>
+        <div class="tag">LLM APIs</div>
 
       </div>
 
@@ -993,7 +659,7 @@
       </div>
 
       <div>
-        Software Engineering • AI Systems • Product Development
+        Software Engineering • AI Systems
       </div>
 
     </footer>
