@@ -3,81 +3,396 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rashi Gupta | Portfolio</title>
-  <meta name="description" content="Full-stack developer portfolio — projects, skills, and links." />
+
+  <title>Rashi Gupta — Software Engineer</title>
+
+  <meta
+    name="description"
+    content="Rashi Gupta — Full Stack Engineer focused on AI systems, scalable web applications, and product engineering."
+  />
+
   <style>
-    :root { --bg:#120018; --card:#220026; --txt:#fff0fb; --muted:#e3b7d7; --accent:#ff4fd8; }
-  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-    background:radial-gradient(1200px 600px at 20% 0%, #4b0070 0%, var(--bg) 55%);
-    color:var(--txt);
-  }
-    .wrap{max-width:900px;margin:0 auto;padding:48px 18px;}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,.35);}
-    h1{margin:0 0 6px;font-size:34px;letter-spacing:.2px;}
-    .sub{margin:0 0 18px;color:var(--muted);line-height:1.5;}
-    .row{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 8px;}
-    a.btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.14);text-decoration:none;color:var(--txt);background:rgba(16,26,51,.55);}
-    a.btn:hover{border-color:rgba(124,92,255,.6);box-shadow:0 0 0 3px rgba(124,92,255,.18) inset;}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px;}
-    .p{padding:16px;border-radius:16px;background:rgba(16,26,51,.45);border:1px solid rgba(255,255,255,.10);}
-    .p h3{margin:0 0 6px;font-size:16px}
-    .p p{margin:0 0 10px;color:var(--muted);font-size:14px;line-height:1.45}
-    .tags{font-size:12px;color:var(--muted)}
-    footer{margin-top:16px;color:var(--muted);font-size:12px}
-    .accent{color:var(--accent)}
+    :root{
+      --bg:#07070a;
+      --surface:#0f1117;
+      --border:rgba(255,255,255,.08);
+      --text:#f5f7fa;
+      --muted:#9ca3af;
+      --accent:#7c5cff;
+      --accent-soft:rgba(124,92,255,.12);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(124,92,255,.18), transparent 32%),
+        radial-gradient(circle at top right, rgba(0,255,200,.08), transparent 25%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      letter-spacing:-0.01em;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:72px 24px;
+    }
+
+    .hero{
+      display:flex;
+      justify-content:space-between;
+      gap:40px;
+      align-items:flex-start;
+      margin-bottom:72px;
+      flex-wrap:wrap;
+    }
+
+    .hero-left{
+      max-width:700px;
+    }
+
+    .label{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:24px;
+    }
+
+    h1{
+      font-size:64px;
+      line-height:1;
+      margin-bottom:24px;
+      font-weight:700;
+      letter-spacing:-0.04em;
+    }
+
+    .hero p{
+      color:var(--muted);
+      font-size:18px;
+      max-width:640px;
+    }
+
+    .highlight{
+      color:var(--text);
+      font-weight:500;
+    }
+
+    .actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:32px;
+    }
+
+    .btn{
+      padding:12px 18px;
+      border-radius:12px;
+      text-decoration:none;
+      color:var(--text);
+      border:1px solid var(--border);
+      transition:.25s ease;
+      font-size:14px;
+      background:rgba(255,255,255,.03);
+    }
+
+    .btn:hover{
+      border-color:var(--accent);
+      background:var(--accent-soft);
+      transform:translateY(-2px);
+    }
+
+    .section{
+      margin-top:80px;
+    }
+
+    .section-title{
+      font-size:14px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      color:var(--muted);
+      margin-bottom:24px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.03),
+        rgba(255,255,255,.015)
+      );
+
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:24px;
+      transition:.3s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(124,92,255,.35);
+    }
+
+    .card h3{
+      font-size:20px;
+      margin-bottom:12px;
+      font-weight:600;
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:15px;
+      margin-bottom:18px;
+    }
+
+    .tech{
+      color:#7f8794;
+      font-size:13px;
+      margin-top:12px;
+    }
+
+    .links{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .links a{
+      text-decoration:none;
+      color:var(--text);
+      font-size:14px;
+      padding:10px 14px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      transition:.2s;
+    }
+
+    .links a:hover{
+      border-color:var(--accent);
+      color:white;
+    }
+
+    .stack{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .tag{
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      color:#d1d5db;
+      font-size:14px;
+    }
+
+    footer{
+      margin-top:90px;
+      padding-top:30px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:14px;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:44px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .container{
+        padding:48px 20px;
+      }
+    }
   </style>
 </head>
-<body>
-  <div class="wrap">
-    <div class="card">
-      <h1>Rashi Gupta</h1>
-      <p class="sub">
-        CSE student focused on <span class="accent">full-stack development</span> and building deployable, real-world web apps.
-        Exploring LLM APIs for automation and personalization.
-      </p>
 
-      <div class="row">
-        <a class="btn" href="https://github.com/rxz33" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/rashi-gupta-09b828310/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn" href="mailto:rashii.gupta.work@gmail.com">Email</a>
-        <a class="btn" href="https://drive.google.com/file/d/1W9EYlDmc_SyHuthi80NW-QjMkEZRtxrs/view?usp=sharing">Resume</a>
+<body>
+
+  <div class="container">
+
+    <section class="hero">
+
+      <div class="hero-left">
+
+        <div class="label">
+          Software Engineer • Full Stack Development • AI Systems
+        </div>
+
+        <h1>
+          Rashi Gupta
+        </h1>
+
+        <p>
+          Full Stack Engineer focused on building
+          <span class="highlight">AI-powered products</span>,
+          scalable backend systems, and modern web applications with strong emphasis on performance, deployment, and user experience.
+        </p>
+
+        <div class="actions">
+          <a class="btn" href="https://github.com/rxz33" target="_blank">
+            GitHub
+          </a>
+
+          <a class="btn" href="https://www.linkedin.com/in/rashi-gupta-09b828310/" target="_blank">
+            LinkedIn
+          </a>
+
+          <a class="btn" href="mailto:rashii.gupta.work@gmail.com">
+            Contact
+          </a>
+
+          <a class="btn" href="https://drive.google.com/file/d/1W9EYlDmc_SyHuthi80NW-QjMkEZRtxrs/view?usp=sharing" target="_blank">
+            Resume
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section">
+
+      <div class="section-title">
+        Selected Projects
       </div>
 
       <div class="grid">
-        <div class="p">
-          <h3>InterQ — AI Interview Generator</h3>
-          <p>Generates interview questions and responses using an LLM-powered backend with a React frontend. Deployed end-to-end.</p>
-          <div class="row">
-            <a class="btn" href="https://myinterq.vercel.app/" target="_blank" rel="noreferrer">Live</a>
-            <a class="btn" href="https://github.com/rxz33/ai-interview-generator-" target="_blank" rel="noreferrer">Repo</a>
+
+        <div class="card">
+
+          <h3>InterQ</h3>
+
+          <p>
+            AI-powered interview generation platform with dynamic question workflows, real-time interaction handling, and scalable deployment architecture.
+          </p>
+
+          <div class="links">
+            <a href="https://myinterq.vercel.app/" target="_blank">Live</a>
+            <a href="https://github.com/rxz33/ai-interview-generator-" target="_blank">Repository</a>
           </div>
-          <div class="tags">React • Backend APIs • Deployment</div>
+
+          <div class="tech">
+            React • Backend APIs • AI Integration • Deployment
+          </div>
+
         </div>
 
-        <div class="p">
-          <h3>PathWise — AI-Powered Career Guidance Web App</h3>
-          <p>Full-stack web app using React and FastAPI, designed to generate personalized career guidance with LLM APIs, dynamic questioning, and skill/roadmap recommendations.</p>
-          <div class="row">
-            <a class="btn" href="https://pathwise-ai-career-guidance-ii0gkawoe.vercel.app/" target="_blank" rel="noreferrer">Live</a>
-            <a class="btn" href="https://github.com/rxz33/pathwise-ai-career-guidance" target="_blank" rel="noreferrer">Repo</a>
+        <div class="card">
+
+          <h3>PathWise</h3>
+
+          <p>
+            AI-driven career guidance platform using adaptive questioning, skill analysis, and personalized recommendation workflows powered by LLM APIs.
+          </p>
+
+          <div class="links">
+            <a href="https://pathwise-ai-career-guidance-ii0gkawoe.vercel.app/" target="_blank">Live</a>
+
+            <a href="https://github.com/rxz33/pathwise-ai-career-guidance" target="_blank">
+              Repository
+            </a>
           </div>
-          <div class="tags">React • FastAPI • LLM APIs • Deployment</div>
+
+          <div class="tech">
+            React • FastAPI • Gemini API • AI Workflows
+          </div>
+
         </div>
 
-        <div class="p">
-          <h3>AI-First CRM — HCP Interaction Logger</h3>
-          <p>Chat-first CRM where reps write notes in conversation and an agent extracts structured HCP interaction fields, suggests follow-ups, runs compliance checks, and logs/edits interactions (latest interaction edit without IDs).</p>
-          <div class="row">
-            <a class="btn" href="https://github.com/rxz33/ai-crm-hcp" target="_blank" rel="noreferrer">Repo</a>
+        <div class="card">
+
+          <h3>AI-First CRM</h3>
+
+          <p>
+            Conversational CRM platform capable of extracting structured HCP interaction data, compliance validation, and intelligent follow-up generation.
+          </p>
+
+          <div class="links">
+            <a href="https://github.com/rxz33/ai-crm-hcp" target="_blank">
+              Repository
+            </a>
           </div>
-          <div class="tags">React • FastAPI • LangGraph • Groq • SQLite</div>
+
+          <div class="tech">
+            React • FastAPI • LangGraph • Groq • SQLite
+          </div>
+
         </div>
+
       </div>
 
-      <footer>
-  
-      </footer>
-    </div>
+    </section>
+
+    <section class="section">
+
+      <div class="section-title">
+        Core Stack
+      </div>
+
+      <div class="stack">
+
+        <div class="tag">React</div>
+        <div class="tag">Next.js</div>
+        <div class="tag">TypeScript</div>
+        <div class="tag">Node.js</div>
+        <div class="tag">FastAPI</div>
+        <div class="tag">PostgreSQL</div>
+        <div class="tag">MongoDB</div>
+        <div class="tag">Docker</div>
+        <div class="tag">Tailwind CSS</div>
+        <div class="tag">GitHub Actions</div>
+        <div class="tag">LLM APIs</div>
+
+      </div>
+
+    </section>
+
+    <footer>
+
+      <div>
+        Rashi Gupta
+      </div>
+
+      <div>
+        Software Engineering • AI Systems • Product Development
+      </div>
+
+    </footer>
+
   </div>
+
 </body>
 </html>
