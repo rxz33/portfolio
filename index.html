@@ -1,77 +1,642 @@
-<!-- REMOVE NAVBAR COMPLETELY -->
+<!doctype html>
+<html lang="en">
 
-<!-- DELETE THIS WHOLE SECTION -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<nav class="navbar">
+  <title>Rashi Gupta — Software Engineer</title>
 
-  ...
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-</nav>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
+  <style>
 
+    :root{
 
-<!-- DELETE THIS WHOLE RIGHT CARD SECTION -->
+      --bg:#f6f8fc;
 
-<div class="hero-card">
+      --text:#0f172a;
+      --muted:#64748b;
 
-  ...
+      --blue:#69b8ff;
+      --blue-soft:#dff1ff;
 
-</div>
+      --lavender:#9b8cff;
+      --lavender-soft:#eee8ff;
 
+      --border:#dbe7f3;
 
+      --card:#ffffffc9;
 
-<!-- REPLACE HERO SECTION WITH THIS -->
+      --shadow:
+        0 10px 30px rgba(90,110,140,.08);
+    }
 
-<section class="hero">
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-  <div class="badge">
-    Software Engineer • Full Stack Development • AI Systems
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+
+      font-family:
+        "Inter",
+        system-ui,
+        sans-serif;
+
+      background:
+        linear-gradient(
+          90deg,
+          #dff2ff 0%,
+          #f7f8fc 50%,
+          #efe8ff 100%
+        );
+
+      color:var(--text);
+
+      line-height:1.6;
+
+      letter-spacing:-0.02em;
+    }
+
+    .container{
+
+      max-width:1120px;
+
+      margin:auto;
+
+      padding:80px 24px 90px;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+
+      display:flex;
+      flex-direction:column;
+
+      gap:30px;
+
+      margin-bottom:110px;
+    }
+
+    .badge{
+
+      width:fit-content;
+
+      padding:10px 18px;
+
+      border-radius:999px;
+
+      background:rgba(255,255,255,.7);
+
+      border:1px solid #cfe2ff;
+
+      color:#4f46e5;
+
+      font-size:13px;
+
+      font-weight:500;
+
+      box-shadow:var(--shadow);
+    }
+
+    h1{
+
+      font-size:82px;
+
+      line-height:.95;
+
+      font-weight:700;
+
+      color:#0f172a;
+
+      letter-spacing:-0.06em;
+    }
+
+    .hero p{
+
+      max-width:760px;
+
+      font-size:21px;
+
+      line-height:1.8;
+
+      color:var(--muted);
+
+      font-weight:400;
+    }
+
+    .highlight{
+      color:#4f46e5;
+      font-weight:600;
+    }
+
+    .actions{
+
+      display:flex;
+      gap:14px;
+
+      flex-wrap:wrap;
+
+      margin-top:6px;
+    }
+
+    .btn{
+
+      text-decoration:none;
+
+      padding:14px 22px;
+
+      border-radius:14px;
+
+      background:rgba(255,255,255,.75);
+
+      border:1px solid var(--border);
+
+      color:#111827;
+
+      font-size:14px;
+
+      font-weight:500;
+
+      transition:.22s ease;
+
+      backdrop-filter:blur(8px);
+
+      box-shadow:var(--shadow);
+    }
+
+    .btn:hover{
+
+      transform:translateY(-2px);
+
+      border-color:#b8d8ff;
+    }
+
+    .btn.primary{
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--lavender)
+        );
+
+      color:white;
+
+      border:none;
+    }
+
+    /* ================= SECTION ================= */
+
+    .section{
+
+      margin-top:90px;
+    }
+
+    .section-title{
+
+      font-size:12px;
+
+      text-transform:uppercase;
+
+      letter-spacing:.22em;
+
+      color:#64748b;
+
+      font-weight:500;
+
+      margin-bottom:28px;
+    }
+
+    /* ================= PROJECTS ================= */
+
+    .projects{
+
+      display:grid;
+
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+      gap:22px;
+    }
+
+    .card{
+
+      background:var(--card);
+
+      backdrop-filter:blur(10px);
+
+      border:1px solid rgba(255,255,255,.85);
+
+      border-radius:28px;
+
+      padding:28px;
+
+      box-shadow:var(--shadow);
+
+      transition:.25s ease;
+    }
+
+    .card:hover{
+
+      transform:translateY(-4px);
+    }
+
+    .card h3{
+
+      font-size:22px;
+
+      font-weight:600;
+
+      color:#111827;
+
+      margin-bottom:14px;
+    }
+
+    .card p{
+
+      font-size:15px;
+
+      line-height:1.8;
+
+      color:var(--muted);
+
+      font-weight:400;
+
+      margin-bottom:22px;
+    }
+
+    .project-links{
+
+      display:flex;
+
+      gap:12px;
+
+      flex-wrap:wrap;
+    }
+
+    .project-links a{
+
+      text-decoration:none;
+
+      padding:11px 16px;
+
+      border-radius:12px;
+
+      background:#f8fbff;
+
+      border:1px solid var(--border);
+
+      color:#0f172a;
+
+      font-size:14px;
+
+      font-weight:500;
+
+      transition:.2s;
+    }
+
+    .project-links a:hover{
+
+      background:white;
+
+      border-color:#b7d6ff;
+    }
+
+    .tech{
+
+      margin-top:18px;
+
+      color:#64748b;
+
+      font-size:13px;
+
+      font-weight:500;
+    }
+
+    /* ================= STACK ================= */
+
+    .stack{
+
+      display:flex;
+
+      flex-wrap:wrap;
+
+      gap:14px;
+    }
+
+    .tag{
+
+      padding:12px 18px;
+
+      border-radius:999px;
+
+      background:rgba(255,255,255,.75);
+
+      border:1px solid var(--border);
+
+      color:#475569;
+
+      font-size:14px;
+
+      font-weight:500;
+
+      box-shadow:var(--shadow);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+
+      margin-top:120px;
+
+      padding-top:28px;
+
+      border-top:1px solid #dbe7f3;
+
+      display:flex;
+
+      justify-content:space-between;
+
+      flex-wrap:wrap;
+
+      gap:12px;
+
+      color:#64748b;
+
+      font-size:14px;
+
+      font-weight:500;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width:768px){
+
+      .container{
+        padding:60px 18px 70px;
+      }
+
+      h1{
+        font-size:54px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .actions{
+        flex-direction:column;
+      }
+
+      .btn{
+        width:100%;
+        text-align:center;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="badge">
+        Software Engineer • Full Stack Development • AI Systems
+      </div>
+
+      <h1>
+        Rashi Gupta
+      </h1>
+
+      <p>
+        Full Stack Engineer focused on building
+        <span class="highlight">AI-powered applications</span>,
+        scalable backend systems, and modern web products with emphasis on clean architecture,
+        performance, and deployment.
+      </p>
+
+      <div class="actions">
+
+        <a
+          class="btn primary"
+          href="https://github.com/rxz33"
+          target="_blank"
+        >
+          GitHub
+        </a>
+
+        <a
+          class="btn"
+          href="https://www.linkedin.com/in/rashi-gupta-09b828310/"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          class="btn"
+          href="mailto:rashii.gupta.work@gmail.com"
+        >
+          Contact
+        </a>
+
+        <a
+          class="btn"
+          href="https://drive.google.com/file/d/1W9EYlDmc_SyHuthi80NW-QjMkEZRtxrs/view?usp=sharing"
+          target="_blank"
+        >
+          Resume
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="section">
+
+      <div class="section-title">
+        Selected Projects
+      </div>
+
+      <div class="projects">
+
+        <!-- PROJECT -->
+
+        <div class="card">
+
+          <h3>
+            InterQ
+          </h3>
+
+          <p>
+            AI-powered interview generation platform with dynamic workflows,
+            real-time interaction handling, and scalable deployment architecture.
+          </p>
+
+          <div class="project-links">
+
+            <a
+              href="https://myinterq.vercel.app/"
+              target="_blank"
+            >
+              Live
+            </a>
+
+            <a
+              href="https://github.com/rxz33/ai-interview-generator-"
+              target="_blank"
+            >
+              Repository
+            </a>
+
+          </div>
+
+          <div class="tech">
+            React • APIs • AI Integration • Deployment
+          </div>
+
+        </div>
+
+        <!-- PROJECT -->
+
+        <div class="card">
+
+          <h3>
+            PathWise
+          </h3>
+
+          <p>
+            AI-driven career guidance platform using adaptive questioning,
+            personalized recommendations, and LLM-powered workflows.
+          </p>
+
+          <div class="project-links">
+
+            <a
+              href="https://pathwise-ai-career-guidance-ii0gkawoe.vercel.app/"
+              target="_blank"
+            >
+              Live
+            </a>
+
+            <a
+              href="https://github.com/rxz33/pathwise-ai-career-guidance"
+              target="_blank"
+            >
+              Repository
+            </a>
+
+          </div>
+
+          <div class="tech">
+            React • FastAPI • Gemini API • AI Workflows
+          </div>
+
+        </div>
+
+        <!-- PROJECT -->
+
+        <div class="card">
+
+          <h3>
+            AI-First CRM
+          </h3>
+
+          <p>
+            Conversational CRM platform for extracting structured interaction data,
+            compliance validation, and intelligent follow-up generation.
+          </p>
+
+          <div class="project-links">
+
+            <a
+              href="https://ai-crm-hcp.vercel.app/"
+              target="_blank"
+            >
+              Live
+            </a>
+
+            <a
+              href="https://github.com/rxz33/ai-crm-hcp"
+              target="_blank"
+            >
+              Repository
+            </a>
+
+          </div>
+
+          <div class="tech">
+            React • FastAPI • LangGraph • Groq • SQLite
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- STACK -->
+
+    <section class="section">
+
+      <div class="section-title">
+        Core Technologies
+      </div>
+
+      <div class="stack">
+
+        <div class="tag">React</div>
+        <div class="tag">Next.js</div>
+        <div class="tag">TypeScript</div>
+        <div class="tag">FastAPI</div>
+        <div class="tag">Node.js</div>
+        <div class="tag">PostgreSQL</div>
+        <div class="tag">MongoDB</div>
+        <div class="tag">Docker</div>
+        <div class="tag">Tailwind CSS</div>
+        <div class="tag">LLM APIs</div>
+
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+      <div>
+        Rashi Gupta
+      </div>
+
+      <div>
+        Software Engineering • AI Systems
+      </div>
+
+    </footer>
+
   </div>
 
-  <h1>
-    Rashi Gupta
-  </h1>
+</body>
 
-  <p>
-    Full Stack Engineer focused on building
-    AI-powered applications, scalable backend systems,
-    and modern web products with emphasis on clean architecture,
-    performance, and deployment.
-  </p>
-
-  <div class="actions">
-
-    <a
-      class="btn primary"
-      href="https://github.com/rxz33"
-      target="_blank"
-    >
-      GitHub
-    </a>
-
-    <a
-      class="btn"
-      href="https://www.linkedin.com/in/rashi-gupta-09b828310/"
-      target="_blank"
-    >
-      LinkedIn
-    </a>
-
-    <a
-      class="btn"
-      href="mailto:rashii.gupta.work@gmail.com"
-    >
-      Contact
-    </a>
-
-    <a
-      class="btn"
-      href="https://drive.google.com/file/d/1W9EYlDmc_SyHuthi80NW-QjMkEZRtxrs/view?usp=sharing"
-      target="_blank"
-    >
-      Resume
-    </a>
-
-  </div>
-
-</section>
+</html>
