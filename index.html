@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -19,20 +19,15 @@
 
     :root{
 
-      --bg:#f6f8fc;
-
-      --text:#0f172a;
+      --text:#1e293b;
       --muted:#64748b;
 
       --blue:#69b8ff;
-      --blue-soft:#dff1ff;
-
       --lavender:#9b8cff;
-      --lavender-soft:#eee8ff;
 
       --border:#dbe7f3;
 
-      --card:#ffffffc9;
+      --card:rgba(255,255,255,.72);
 
       --shadow:
         0 10px 30px rgba(90,110,140,.08);
@@ -52,7 +47,6 @@
 
       font-family:
         "Inter",
-        system-ui,
         sans-serif;
 
       background:
@@ -65,9 +59,9 @@
 
       color:var(--text);
 
-      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
 
-      letter-spacing:-0.02em;
+      line-height:1.7;
     }
 
     .container{
@@ -76,7 +70,7 @@
 
       margin:auto;
 
-      padding:80px 24px 90px;
+      padding:90px 24px 80px;
     }
 
     /* ================= HERO ================= */
@@ -86,7 +80,7 @@
       display:flex;
       flex-direction:column;
 
-      gap:30px;
+      gap:26px;
 
       margin-bottom:110px;
     }
@@ -99,90 +93,104 @@
 
       border-radius:999px;
 
-      background:rgba(255,255,255,.7);
+      background:rgba(255,255,255,.65);
 
       border:1px solid #cfe2ff;
 
       color:#4f46e5;
 
-      font-size:13px;
+      font-size:12px;
 
       font-weight:500;
+
+      letter-spacing:.02em;
+
+      backdrop-filter:blur(10px);
 
       box-shadow:var(--shadow);
     }
 
     h1{
 
-      font-size:82px;
+      font-family:
+        "Manrope",
+        sans-serif;
 
-      line-height:.95;
+      font-size:58px;
 
-      font-weight:700;
+      line-height:1.02;
 
-      color:#0f172a;
+      font-weight:600;
 
-      letter-spacing:-0.06em;
+      letter-spacing:-0.05em;
+
+      color:#1e293b;
+
+      opacity:.95;
     }
 
     .hero p{
 
       max-width:760px;
 
-      font-size:21px;
+      font-size:18px;
 
-      line-height:1.8;
-
-      color:var(--muted);
+      line-height:1.9;
 
       font-weight:400;
+
+      color:var(--muted);
     }
 
     .highlight{
+
       color:#4f46e5;
+
       font-weight:600;
     }
 
     .actions{
 
       display:flex;
+
       gap:14px;
 
       flex-wrap:wrap;
 
-      margin-top:6px;
+      margin-top:4px;
     }
 
     .btn{
 
       text-decoration:none;
 
-      padding:14px 22px;
+      padding:13px 20px;
 
       border-radius:14px;
 
-      background:rgba(255,255,255,.75);
+      background:rgba(255,255,255,.72);
 
       border:1px solid var(--border);
 
-      color:#111827;
+      color:#334155;
 
-      font-size:14px;
+      font-size:13px;
 
       font-weight:500;
 
       transition:.22s ease;
 
-      backdrop-filter:blur(8px);
+      backdrop-filter:blur(10px);
 
-      box-shadow:var(--shadow);
+      box-shadow:
+        0 8px 24px rgba(120,140,170,.06);
     }
 
     .btn:hover{
 
       transform:translateY(-2px);
 
-      border-color:#b8d8ff;
+      border-color:#b7d6ff;
     }
 
     .btn.primary{
@@ -190,8 +198,8 @@
       background:
         linear-gradient(
           135deg,
-          var(--blue),
-          var(--lavender)
+          #69b8ff,
+          #9b8cff
         );
 
       color:white;
@@ -208,15 +216,15 @@
 
     .section-title{
 
-      font-size:12px;
+      font-size:11px;
 
       text-transform:uppercase;
 
-      letter-spacing:.22em;
+      letter-spacing:.24em;
 
-      color:#64748b;
+      color:#7c8aa5;
 
-      font-weight:500;
+      font-weight:600;
 
       margin-bottom:28px;
     }
@@ -236,13 +244,13 @@
 
       background:var(--card);
 
-      backdrop-filter:blur(10px);
-
       border:1px solid rgba(255,255,255,.85);
 
       border-radius:28px;
 
       padding:28px;
+
+      backdrop-filter:blur(12px);
 
       box-shadow:var(--shadow);
 
@@ -256,24 +264,28 @@
 
     .card h3{
 
-      font-size:22px;
+      font-family:
+        "Manrope",
+        sans-serif;
+
+      font-size:20px;
 
       font-weight:600;
 
-      color:#111827;
+      color:#1e293b;
 
       margin-bottom:14px;
     }
 
     .card p{
 
-      font-size:15px;
+      font-size:14px;
 
-      line-height:1.8;
-
-      color:var(--muted);
+      line-height:1.9;
 
       font-weight:400;
+
+      color:#64748b;
 
       margin-bottom:22px;
     }
@@ -299,9 +311,9 @@
 
       border:1px solid var(--border);
 
-      color:#0f172a;
+      color:#334155;
 
-      font-size:14px;
+      font-size:13px;
 
       font-weight:500;
 
@@ -319,9 +331,9 @@
 
       margin-top:18px;
 
-      color:#64748b;
+      color:#7c8aa5;
 
-      font-size:13px;
+      font-size:12px;
 
       font-weight:500;
     }
@@ -339,30 +351,28 @@
 
     .tag{
 
-      padding:12px 18px;
+      padding:11px 16px;
 
       border-radius:999px;
 
-      background:rgba(255,255,255,.75);
+      background:rgba(255,255,255,.72);
 
       border:1px solid var(--border);
 
-      color:#475569;
+      color:#5b6474;
 
-      font-size:14px;
+      font-size:13px;
 
       font-weight:500;
-
-      box-shadow:var(--shadow);
     }
 
     /* ================= FOOTER ================= */
 
     footer{
 
-      margin-top:120px;
+      margin-top:110px;
 
-      padding-top:28px;
+      padding-top:24px;
 
       border-top:1px solid #dbe7f3;
 
@@ -374,9 +384,9 @@
 
       gap:12px;
 
-      color:#64748b;
+      color:#7c8aa5;
 
-      font-size:14px;
+      font-size:13px;
 
       font-weight:500;
     }
@@ -386,15 +396,15 @@
     @media(max-width:768px){
 
       .container{
-        padding:60px 18px 70px;
+        padding:70px 18px;
       }
 
       h1{
-        font-size:54px;
+        font-size:42px;
       }
 
       .hero p{
-        font-size:18px;
+        font-size:16px;
       }
 
       .actions{
@@ -430,8 +440,8 @@
       <p>
         Full Stack Engineer focused on building
         <span class="highlight">AI-powered applications</span>,
-        scalable backend systems, and modern web products with emphasis on clean architecture,
-        performance, and deployment.
+        scalable backend systems, and modern web products with emphasis on
+        clean architecture, performance, and deployment.
       </p>
 
       <div class="actions">
