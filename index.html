@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Rashi Gupta — Software Engineer</title>
 
@@ -11,498 +12,656 @@
     content="Rashi Gupta — Full Stack Engineer focused on AI systems, scalable web applications, and product engineering."
   />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
 
-/* =========================
-   MODERN SOFT BLUE + LILAC THEME
-========================= */
+    :root{
 
-:root{
+      --bg:#f4f7fc;
 
-  --bg:#f7f8fc;
+      --text:#0f172a;
+      --muted:#5f6b85;
 
-  --surface:#ffffffcc;
-  --surface-solid:#ffffff;
+      --blue:#4da8ff;
+      --blue-soft:#dff0ff;
 
-  --text:#0f172a;
-  --muted:#64748b;
+      --lavender:#9d7dff;
+      --lavender-soft:#ece5ff;
 
-  --border:#dbe7f3;
+      --lilac:#f2ebff;
 
-  --primary:#1da1f2;
-  --primary-soft:#d9f0ff;
+      --border:#d7e4f4;
 
-  --lavender:#e9e2ff;
-  --lilac:#f1ebff;
+      --shadow:
+        0 10px 35px rgba(104,125,160,.10);
 
-  --shadow:
-    0 10px 30px rgba(125,145,180,.10);
+      --hover-shadow:
+        0 20px 55px rgba(104,125,160,.16);
+    }
 
-  --hover-shadow:
-    0 18px 45px rgba(125,145,180,.16);
-}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-/* ========================= */
+    html{
+      scroll-behavior:smooth;
+    }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+    body{
 
-html{
-  scroll-behavior:smooth;
-}
+      font-family:
+        "Inter",
+        system-ui,
+        sans-serif;
 
-body{
+      background:
+        linear-gradient(
+          90deg,
+          #dcefff 0%,
+          #f6f8fc 48%,
+          #eee5ff 100%
+        );
 
-  font-family:
-    Inter,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+      color:var(--text);
 
-  background:
-    linear-gradient(
-      90deg,
-      #dff2ff 0%,
-      #f5f6fb 48%,
-      #efe7ff 100%
-    );
+      line-height:1.6;
+      letter-spacing:-0.02em;
+    }
 
-  color:var(--text);
+    .container{
+      max-width:1280px;
+      margin:auto;
+      padding:42px 24px 80px;
+    }
 
-  line-height:1.6;
-  letter-spacing:-0.02em;
-}
+    /* ================= NAVBAR ================= */
 
-/* ========================= */
+    .navbar{
 
-.container{
-  max-width:1180px;
-  margin:auto;
-  padding:72px 24px;
-}
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
 
-/* ========================= */
+      padding:12px 18px;
 
-.hero{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:60px;
-  align-items:center;
-}
+      border-radius:24px;
 
-.label{
+      background:rgba(255,255,255,.55);
 
-  display:inline-flex;
-  align-items:center;
+      backdrop-filter:blur(12px);
 
-  padding:10px 18px;
+      border:1px solid rgba(255,255,255,.8);
 
-  border-radius:999px;
+      box-shadow:var(--shadow);
 
-  background:rgba(255,255,255,.75);
+      margin-bottom:70px;
+    }
 
-  border:1px solid #bfe3ff;
+    .logo-wrap{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
 
-  color:#0f5ea8;
+    .logo{
 
-  font-size:14px;
-  font-weight:500;
+      width:48px;
+      height:48px;
 
-  box-shadow:var(--shadow);
+      border-radius:16px;
 
-  margin-bottom:28px;
-}
+      display:flex;
+      align-items:center;
+      justify-content:center;
 
-/* ========================= */
+      font-weight:800;
+      font-size:20px;
 
-h1{
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--lavender)
+        );
 
-  font-size:86px;
-  line-height:.95;
+      color:white;
+    }
 
-  font-weight:700;
+    .logo-text{
+      font-size:28px;
+      font-weight:700;
+      color:#111827;
+    }
 
-  color:#020617;
+    .nav-links{
+      display:flex;
+      gap:38px;
+      align-items:center;
+    }
 
-  margin-bottom:28px;
+    .nav-links a{
 
-  letter-spacing:-0.06em;
+      text-decoration:none;
 
-  max-width:700px;
-}
+      color:#1e293b;
 
-.hero p{
+      font-weight:500;
 
-  font-size:22px;
+      transition:.2s;
+    }
 
-  color:#475569;
+    .nav-links a:hover{
+      color:var(--lavender);
+    }
 
-  max-width:640px;
+    .resume-btn{
 
-  margin-bottom:34px;
-}
+      text-decoration:none;
 
-/* ========================= */
+      padding:14px 24px;
 
-.actions{
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-}
+      border-radius:16px;
 
-.btn{
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--lavender)
+        );
 
-  text-decoration:none;
+      color:white;
 
-  padding:16px 24px;
+      font-weight:600;
 
-  border-radius:18px;
+      box-shadow:
+        0 12px 24px rgba(120,120,255,.18);
+    }
 
-  font-size:15px;
-  font-weight:600;
+    /* ================= HERO ================= */
 
-  transition:.25s ease;
+    .hero{
 
-  border:1px solid transparent;
-}
+      display:grid;
 
-.btn-primary{
+      grid-template-columns:1.05fr .95fr;
 
-  background:#16a3f7;
+      gap:56px;
 
-  color:white;
+      align-items:center;
+    }
 
-  box-shadow:
-    0 12px 24px rgba(22,163,247,.22);
-}
+    .badge{
 
-.btn-primary:hover{
-  transform:translateY(-2px);
-}
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
 
-.btn-secondary{
+      padding:12px 18px;
 
-  background:rgba(255,255,255,.75);
+      border-radius:999px;
 
-  color:#0f172a;
+      background:rgba(255,255,255,.65);
 
-  border:1px solid #cfe6ff;
-}
+      border:1px solid #cfe5ff;
 
-.btn-secondary:hover{
+      color:#2458d3;
 
-  background:white;
+      font-size:14px;
+      font-weight:600;
 
-  border-color:#9fd3ff;
-}
+      margin-bottom:28px;
 
-/* ========================= */
+      box-shadow:var(--shadow);
+    }
 
-.hero-card{
+    .dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:#356dff;
+    }
 
-  background:rgba(255,255,255,.62);
+    h1{
 
-  backdrop-filter:blur(12px);
+      font-size:88px;
 
-  border-radius:36px;
+      line-height:.92;
 
-  padding:26px;
+      font-weight:800;
 
-  border:1px solid rgba(219,231,243,.95);
+      color:#060b1a;
 
-  box-shadow:var(--shadow);
-}
+      letter-spacing:-0.07em;
 
-.card-grid{
+      margin-bottom:30px;
+    }
 
-  display:grid;
+    .hero p{
 
-  grid-template-columns:1fr 1fr;
+      max-width:700px;
 
-  gap:16px;
-}
+      font-size:22px;
 
-.mini-card{
+      color:var(--muted);
 
-  padding:28px;
+      margin-bottom:38px;
+    }
 
-  border-radius:24px;
+    .highlight{
+      color:#4254e6;
+      font-weight:700;
+    }
 
-  background:#eef6ff;
+    .hero-actions{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
 
-  border:1px solid #d7e9fb;
-}
+    .hero-btn{
 
-.mini-card:nth-child(2){
-  background:#f3efff;
-}
+      text-decoration:none;
 
-.mini-card h3{
+      padding:16px 22px;
 
-  font-size:15px;
+      border-radius:18px;
 
-  color:#64748b;
+      font-weight:600;
 
-  margin-bottom:18px;
-}
+      transition:.25s ease;
+    }
 
-.mini-card h2{
+    .hero-btn.primary{
 
-  font-size:26px;
+      background:#249dff;
 
-  line-height:1.25;
+      color:white;
 
-  margin-bottom:16px;
+      box-shadow:
+        0 10px 24px rgba(36,157,255,.22);
+    }
 
-  color:#111827;
-}
+    .hero-btn.secondary{
 
-.mini-card p{
+      background:rgba(255,255,255,.7);
 
-  color:#64748b;
+      border:1px solid var(--border);
 
-  font-size:15px;
-}
+      color:#111827;
+    }
 
-/* ========================= */
+    .hero-btn:hover{
+      transform:translateY(-2px);
+    }
 
-.bottom-panel{
+    /* ================= HERO CARD ================= */
 
-  margin-top:18px;
+    .hero-card{
 
-  padding:28px;
+      background:rgba(255,255,255,.52);
 
-  border-radius:24px;
+      backdrop-filter:blur(12px);
 
-  background:white;
+      border-radius:36px;
 
-  border:1px solid #dbe7f3;
-}
+      padding:26px;
 
-.bottom-panel h4{
+      border:1px solid rgba(255,255,255,.8);
 
-  margin-bottom:18px;
+      box-shadow:var(--shadow);
+    }
 
-  color:#64748b;
+    .top-grid{
 
-  font-size:15px;
-}
+      display:grid;
 
-.tags{
+      grid-template-columns:1fr 1fr;
 
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-}
+      gap:18px;
+    }
 
-.tag{
+    .mini-card{
 
-  padding:12px 18px;
+      padding:28px;
 
-  border-radius:999px;
+      border-radius:28px;
 
-  background:#f8fbff;
+      border:1px solid #d7e4f4;
+    }
 
-  border:1px solid #dbe7f3;
+    .mini-card.blue{
+      background:#eef7ff;
+    }
 
-  color:#475569;
+    .mini-card.lavender{
+      background:#f3efff;
+    }
 
-  font-size:14px;
-}
+    .mini-card small{
 
-/* ========================= */
+      color:#4f46e5;
 
-.section{
-  margin-top:110px;
-}
+      font-weight:700;
 
-.section-title{
+      font-size:14px;
+    }
 
-  font-size:14px;
+    .mini-card h3{
 
-  text-transform:uppercase;
+      margin:18px 0 14px;
 
-  letter-spacing:.16em;
+      font-size:22px;
 
-  color:#64748b;
+      line-height:1.35;
+    }
 
-  margin-bottom:26px;
-}
+    .mini-card p{
 
-/* ========================= */
+      color:#5f6b85;
 
-.projects{
+      font-size:15px;
+    }
 
-  display:grid;
+    .bottom-card{
 
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      margin-top:18px;
 
-  gap:22px;
-}
+      background:white;
 
-.project{
+      border-radius:28px;
 
-  background:rgba(255,255,255,.72);
+      border:1px solid var(--border);
 
-  backdrop-filter:blur(10px);
+      padding:28px;
+    }
 
-  border-radius:28px;
+    .bottom-card h4{
 
-  padding:28px;
+      margin-bottom:18px;
 
-  border:1px solid #dbe7f3;
+      color:#4f46e5;
 
-  transition:.3s ease;
+      font-size:16px;
+    }
 
-  box-shadow:var(--shadow);
-}
+    .tag-wrap{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
 
-.project:hover{
+    .tag{
 
-  transform:translateY(-4px);
+      padding:12px 18px;
 
-  box-shadow:var(--hover-shadow);
-}
+      border-radius:999px;
 
-.project h3{
+      background:#f7fbff;
 
-  font-size:24px;
+      border:1px solid var(--border);
 
-  margin-bottom:14px;
+      color:#475569;
 
-  color:#111827;
-}
+      font-size:14px;
+      font-weight:500;
+    }
 
-.project p{
+    /* ================= SECTION ================= */
 
-  font-size:15px;
+    .section{
+      margin-top:110px;
+    }
 
-  color:#64748b;
+    .section-header{
 
-  margin-bottom:20px;
-}
+      display:flex;
+      align-items:center;
+      gap:22px;
 
-.project-links{
+      margin-bottom:34px;
+    }
 
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
+    .section-header h2{
 
-.project-links a{
+      font-size:14px;
 
-  text-decoration:none;
+      letter-spacing:.22em;
 
-  padding:10px 16px;
+      color:#4254e6;
 
-  border-radius:12px;
+      text-transform:uppercase;
 
-  background:#f8fbff;
+      white-space:nowrap;
+    }
 
-  border:1px solid #dbe7f3;
+    .line{
 
-  color:#0f172a;
+      width:100%;
+      height:1px;
 
-  font-size:14px;
-  font-weight:500;
-}
+      background:#cbdaf3;
+    }
 
-.project-links a:hover{
+    /* ================= PROJECTS ================= */
 
-  border-color:#9fd3ff;
+    .projects{
 
-  background:white;
-}
+      display:grid;
 
-.tech{
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 
-  margin-top:18px;
+      gap:22px;
+    }
 
-  color:#64748b;
+    .project{
 
-  font-size:13px;
-}
+      background:rgba(255,255,255,.65);
 
-/* ========================= */
+      backdrop-filter:blur(12px);
 
-.stack{
+      border-radius:30px;
 
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-}
+      padding:28px;
 
-.stack-tag{
+      border:1px solid rgba(255,255,255,.9);
 
-  padding:12px 18px;
+      box-shadow:var(--shadow);
 
-  border-radius:999px;
+      transition:.28s ease;
+    }
 
-  background:white;
+    .project:hover{
 
-  border:1px solid #dbe7f3;
+      transform:translateY(-5px);
 
-  color:#475569;
+      box-shadow:var(--hover-shadow);
+    }
 
-  font-size:14px;
-}
+    .icon{
 
-/* ========================= */
+      width:54px;
+      height:54px;
 
-footer{
+      border-radius:18px;
 
-  margin-top:110px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
 
-  padding-top:30px;
+      font-size:24px;
 
-  border-top:1px solid #dbe7f3;
+      color:white;
 
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:12px;
+      margin-bottom:22px;
+    }
 
-  color:#64748b;
+    .icon.blue{
+      background:linear-gradient(135deg,#4da8ff,#78b9ff);
+    }
 
-  font-size:14px;
-}
+    .icon.lavender{
+      background:linear-gradient(135deg,#8b6cff,#b08cff);
+    }
 
-/* ========================= */
+    .project h3{
 
-@media(max-width:960px){
+      font-size:22px;
 
-  .hero{
-    grid-template-columns:1fr;
-  }
+      margin-bottom:14px;
+    }
 
-  h1{
-    font-size:58px;
-  }
+    .project p{
 
-  .hero p{
-    font-size:18px;
-  }
-}
+      color:var(--muted);
 
-@media(max-width:640px){
+      font-size:16px;
 
-  h1{
-    font-size:46px;
-  }
+      margin-bottom:24px;
+    }
 
-  .container{
-    padding:48px 18px;
-  }
+    .project-links{
 
-  .card-grid{
-    grid-template-columns:1fr;
-  }
-}
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .project-links a{
+
+      text-decoration:none;
+
+      padding:12px 18px;
+
+      border-radius:14px;
+
+      background:#f8fbff;
+
+      border:1px solid var(--border);
+
+      color:#111827;
+
+      font-size:14px;
+      font-weight:600;
+
+      transition:.2s;
+    }
+
+    .project-links a:hover{
+
+      background:white;
+
+      border-color:#9ecfff;
+    }
+
+    .tech{
+
+      margin-top:20px;
+
+      color:#64748b;
+
+      font-size:13px;
+    }
+
+    /* ================= SKILLS ================= */
+
+    .skills{
+
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+    }
+
+    .skill{
+
+      padding:14px 20px;
+
+      border-radius:999px;
+
+      background:rgba(255,255,255,.72);
+
+      border:1px solid var(--border);
+
+      color:#475569;
+
+      font-weight:500;
+
+      box-shadow:var(--shadow);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+
+      margin-top:120px;
+
+      padding-top:34px;
+
+      border-top:1px solid #d4e2f5;
+
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:14px;
+
+      color:#64748b;
+
+      font-size:14px;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width:1050px){
+
+      .hero{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        font-size:62px;
+      }
+
+      .nav-links{
+        display:none;
+      }
+    }
+
+    @media(max-width:640px){
+
+      .container{
+        padding:24px 18px 60px;
+      }
+
+      h1{
+        font-size:48px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+
+      .top-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+      }
+
+      .hero-btn{
+        width:100%;
+        text-align:center;
+      }
+    }
+
   </style>
 </head>
 
@@ -510,11 +669,50 @@ footer{
 
   <div class="container">
 
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+      <div class="logo-wrap">
+
+        <div class="logo">
+          RG
+        </div>
+
+        <div class="logo-text">
+          Rashi Gupta
+        </div>
+
+      </div>
+
+      <div class="nav-links">
+
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Skills</a>
+        <a href="#">Experience</a>
+        <a href="#">Contact</a>
+
+      </div>
+
+      <a
+        class="resume-btn"
+        href="https://drive.google.com/file/d/1W9EYlDmc_SyHuthi80NW-QjMkEZRtxrs/view?usp=sharing"
+        target="_blank"
+      >
+        Resume
+      </a>
+
+    </nav>
+
+    <!-- HERO -->
+
     <section class="hero">
 
-      <div class="hero-left">
+      <div>
 
-        <div class="label">
+        <div class="badge">
+          <div class="dot"></div>
           Software Engineer • Full Stack Development • AI Systems
         </div>
 
@@ -528,23 +726,85 @@ footer{
           scalable backend systems, and modern web applications with strong emphasis on performance, deployment, and user experience.
         </p>
 
-        <div class="actions">
+        <div class="hero-actions">
 
-          <a class="btn" href="https://github.com/rxz33" target="_blank">
+          <a
+            class="hero-btn primary"
+            href="https://github.com/rxz33"
+            target="_blank"
+          >
             GitHub
           </a>
 
-          <a class="btn" href="https://www.linkedin.com/in/rashi-gupta-09b828310/" target="_blank">
+          <a
+            class="hero-btn secondary"
+            href="https://www.linkedin.com/in/rashi-gupta-09b828310/"
+            target="_blank"
+          >
             LinkedIn
           </a>
 
-          <a class="btn" href="mailto:rashii.gupta.work@gmail.com">
+          <a
+            class="hero-btn secondary"
+            href="mailto:rashii.gupta.work@gmail.com"
+          >
             Contact
           </a>
 
-          <a class="btn" href="https://drive.google.com/file/d/1W9EYlDmc_SyHuthi80NW-QjMkEZRtxrs/view?usp=sharing" target="_blank">
-            Resume
-          </a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT PANEL -->
+
+      <div class="hero-card">
+
+        <div class="top-grid">
+
+          <div class="mini-card blue">
+
+            <small>What you build</small>
+
+            <h3>
+              AI-powered products and scalable systems
+            </h3>
+
+            <p>
+              Full stack applications designed with deployment, automation, and real-world workflows in mind.
+            </p>
+
+          </div>
+
+          <div class="mini-card lavender">
+
+            <small>Focus</small>
+
+            <h3>
+              Product engineering with modern AI workflows
+            </h3>
+
+            <p>
+              Combining backend engineering, frontend systems, and LLM integrations into production-ready platforms.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="bottom-card">
+
+          <h4>
+            Core areas
+          </h4>
+
+          <div class="tag-wrap">
+
+            <div class="tag">AI Applications</div>
+            <div class="tag">Full Stack Systems</div>
+            <div class="tag">LLM Integrations</div>
+            <div class="tag">Product Engineering</div>
+
+          </div>
 
         </div>
 
@@ -552,25 +812,54 @@ footer{
 
     </section>
 
+    <!-- PROJECTS -->
+
     <section class="section">
 
-      <div class="section-title">
-        Selected Projects
+      <div class="section-header">
+
+        <h2>
+          Selected Projects
+        </h2>
+
+        <div class="line"></div>
+
       </div>
 
-      <div class="grid">
+      <div class="projects">
 
-        <div class="card">
+        <!-- PROJECT 1 -->
 
-          <h3>InterQ</h3>
+        <div class="project">
+
+          <div class="icon blue">
+            ✦
+          </div>
+
+          <h3>
+            InterQ
+          </h3>
 
           <p>
-            AI-powered interview generation platform with dynamic question workflows, real-time interaction handling, and scalable deployment architecture.
+            AI-powered interview generation platform with dynamic workflows, real-time interaction handling, and scalable deployment architecture.
           </p>
 
-          <div class="links">
-            <a href="https://myinterq.vercel.app/" target="_blank">Live</a>
-            <a href="https://github.com/rxz33/ai-interview-generator-" target="_blank">Repository</a>
+          <div class="project-links">
+
+            <a
+              href="https://myinterq.vercel.app/"
+              target="_blank"
+            >
+              Live
+            </a>
+
+            <a
+              href="https://github.com/rxz33/ai-interview-generator-"
+              target="_blank"
+            >
+              Repository
+            </a>
+
           </div>
 
           <div class="tech">
@@ -579,22 +868,38 @@ footer{
 
         </div>
 
-        <div class="card">
+        <!-- PROJECT 2 -->
 
-          <h3>PathWise</h3>
+        <div class="project">
+
+          <div class="icon lavender">
+            ⌁
+          </div>
+
+          <h3>
+            PathWise
+          </h3>
 
           <p>
             AI-driven career guidance platform using adaptive questioning, skill analysis, and personalized recommendation workflows powered by LLM APIs.
           </p>
 
-          <div class="links">
-            <a href="https://pathwise-ai-career-guidance-ii0gkawoe.vercel.app/" target="_blank">
+          <div class="project-links">
+
+            <a
+              href="https://pathwise-ai-career-guidance-ii0gkawoe.vercel.app/"
+              target="_blank"
+            >
               Live
             </a>
 
-            <a href="https://github.com/rxz33/pathwise-ai-career-guidance" target="_blank">
+            <a
+              href="https://github.com/rxz33/pathwise-ai-career-guidance"
+              target="_blank"
+            >
               Repository
             </a>
+
           </div>
 
           <div class="tech">
@@ -603,18 +908,38 @@ footer{
 
         </div>
 
-        <div class="card">
+        <!-- PROJECT 3 -->
 
-          <h3>AI-First CRM</h3>
+        <div class="project">
+
+          <div class="icon lavender">
+            ⛁
+          </div>
+
+          <h3>
+            AI-First CRM
+          </h3>
 
           <p>
             Conversational CRM platform capable of extracting structured HCP interaction data, compliance validation, and intelligent follow-up generation.
           </p>
 
-          <div class="links">
-            <a href="https://github.com/rxz33/ai-crm-hcp" target="_blank">
+          <div class="project-links">
+
+            <a
+              href="https://ai-crm-hcp.vercel.app/"
+              target="_blank"
+            >
+              Live
+            </a>
+
+            <a
+              href="https://github.com/rxz33/ai-crm-hcp"
+              target="_blank"
+            >
               Repository
             </a>
+
           </div>
 
           <div class="tech">
@@ -627,29 +952,39 @@ footer{
 
     </section>
 
+    <!-- SKILLS -->
+
     <section class="section">
 
-      <div class="section-title">
-        Core Technologies
+      <div class="section-header">
+
+        <h2>
+          Core Technologies
+        </h2>
+
+        <div class="line"></div>
+
       </div>
 
-      <div class="stack">
+      <div class="skills">
 
-        <div class="tag">React</div>
-        <div class="tag">Next.js</div>
-        <div class="tag">TypeScript</div>
-        <div class="tag">Node.js</div>
-        <div class="tag">FastAPI</div>
-        <div class="tag">PostgreSQL</div>
-        <div class="tag">MongoDB</div>
-        <div class="tag">Docker</div>
-        <div class="tag">Tailwind CSS</div>
-        <div class="tag">GitHub Actions</div>
-        <div class="tag">LLM APIs</div>
+        <div class="skill">React</div>
+        <div class="skill">Next.js</div>
+        <div class="skill">TypeScript</div>
+        <div class="skill">FastAPI</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">PostgreSQL</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">Docker</div>
+        <div class="skill">Tailwind CSS</div>
+        <div class="skill">GitHub Actions</div>
+        <div class="skill">LLM APIs</div>
 
       </div>
 
     </section>
+
+    <!-- FOOTER -->
 
     <footer>
 
@@ -666,4 +1001,5 @@ footer{
   </div>
 
 </body>
+
 </html>
