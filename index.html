@@ -49,35 +49,116 @@
       scroll-behavior:smooth;
     }
 
-    body{
+    /* =========================
+   REPLACE ONLY BODY STYLE
+========================= */
 
-      font-family:
-        "Inter",
-        sans-serif;
+body{
 
-      background:
-        linear-gradient(
-          135deg,
-          #d9eeff 0%,
-          #edf3fb 52%,
-          #e7ddff 100%
-        );
+  font-family:
+    "Inter",
+    sans-serif;
 
-      color:var(--text);
+  background:
 
-      line-height:1.7;
+    radial-gradient(
+      circle at top left,
+      rgba(116,174,255,.38) 0%,
+      transparent 30%
+    ),
 
-      -webkit-font-smoothing:antialiased;
-    }
+    radial-gradient(
+      circle at top right,
+      rgba(168,132,255,.26) 0%,
+      transparent 34%
+    ),
 
-    .container{
+    radial-gradient(
+      circle at bottom right,
+      rgba(255,255,255,.85) 0%,
+      transparent 40%
+    ),
 
-      max-width:1120px;
+    linear-gradient(
+      135deg,
+      #d6ecff 0%,
+      #edf3fb 42%,
+      #ece2ff 100%
+    );
 
-      margin:auto;
+  color:var(--text);
 
-      padding:90px 24px 90px;
-    }
+  line-height:1.7;
+
+  -webkit-font-smoothing:antialiased;
+
+  min-height:100vh;
+}
+
+
+
+/* =========================
+   ADD THIS FOR BETTER DEPTH
+========================= */
+
+.container{
+
+  position:relative;
+}
+
+
+
+/* =========================
+   OPTIONAL GLOW EFFECT
+========================= */
+
+.container::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:-120px;
+  left:-140px;
+
+  width:380px;
+  height:380px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(104,173,255,.22),
+      transparent 70%
+    );
+
+  filter:blur(20px);
+
+  z-index:-1;
+}
+
+.container::after{
+
+  content:"";
+
+  position:absolute;
+
+  top:120px;
+  right:-120px;
+
+  width:340px;
+  height:340px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(163,126,255,.18),
+      transparent 70%
+    );
+
+  filter:blur(20px);
+
+  z-index:-1;
+}
 
     /* ================= HERO ================= */
 
