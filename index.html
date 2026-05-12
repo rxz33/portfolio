@@ -20,23 +20,23 @@
     :root{
 
       --text:#111827;
-      --muted:#4b5565;
+      --muted:#556276;
 
-      --blue:#4c97ff;
-      --blue-dark:#327dff;
+      --blue:#4f9cff;
+      --blue-dark:#347eff;
 
-      --lilac:#9a7cff;
-      --lilac-dark:#785df2;
+      --lilac:#9c7dff;
+      --lilac-dark:#785ff0;
 
       --surface:rgba(255,255,255,.78);
 
-      --border:#d5def0;
+      --border:#d8e2f1;
 
       --shadow:
-        0 10px 35px rgba(72,90,130,.08);
+        0 10px 35px rgba(70,90,130,.08);
 
       --hover:
-        0 20px 60px rgba(72,90,130,.16);
+        0 20px 60px rgba(70,90,130,.16);
     }
 
     *{
@@ -59,21 +59,21 @@
 
         radial-gradient(
           circle at top left,
-          rgba(85,160,255,.32) 0%,
-          transparent 30%
+          rgba(90,165,255,.28) 0%,
+          transparent 32%
         ),
 
         radial-gradient(
           circle at top right,
-          rgba(153,120,255,.22) 0%,
-          transparent 32%
+          rgba(155,120,255,.20) 0%,
+          transparent 34%
         ),
 
         linear-gradient(
           135deg,
           #d9ecff 0%,
-          #edf3fb 45%,
-          #e9e0ff 100%
+          #edf3fb 48%,
+          #e8deff 100%
         );
 
       color:var(--text);
@@ -115,7 +115,7 @@
 
       border:1px solid #c9daf5;
 
-      color:#4d56e8;
+      color:#4654e7;
 
       font-size:12px;
 
@@ -126,6 +126,27 @@
       margin-bottom:34px;
 
       box-shadow:var(--shadow);
+    }
+
+    /* ================= BRAND ================= */
+
+    .brand-row{
+
+      display:flex;
+
+      align-items:center;
+
+      gap:24px;
+
+      margin-bottom:30px;
+    }
+
+    .logo{
+
+      flex-shrink:0;
+
+      filter:
+        drop-shadow(0 14px 28px rgba(61,130,246,.20));
     }
 
     .name{
@@ -143,10 +164,33 @@
       line-height:.95;
 
       color:#0f172a;
+    }
 
-      margin-bottom:28px;
+    .role-line{
 
-      max-width:700px;
+      display:flex;
+
+      align-items:center;
+
+      gap:12px;
+
+      margin-top:12px;
+
+      color:#64748b;
+
+      font-size:14px;
+
+      font-weight:600;
+    }
+
+    .dot{
+
+      width:5px;
+      height:5px;
+
+      border-radius:999px;
+
+      background:#7d69f2;
     }
 
     .hero p{
@@ -159,7 +203,7 @@
 
       line-height:1.9;
 
-      margin-bottom:38px;
+      margin-bottom:40px;
     }
 
     .highlight{
@@ -168,6 +212,8 @@
 
       font-weight:700;
     }
+
+    /* ================= ACTIONS ================= */
 
     .actions{
 
@@ -186,7 +232,7 @@
 
       border-radius:16px;
 
-      background:rgba(255,255,255,.82);
+      background:rgba(255,255,255,.84);
 
       border:1px solid var(--border);
 
@@ -199,6 +245,12 @@
       transition:.22s ease;
 
       box-shadow:var(--shadow);
+
+      display:flex;
+
+      align-items:center;
+
+      gap:10px;
     }
 
     .btn:hover{
@@ -266,7 +318,7 @@
       position:absolute;
 
       left:-140px;
-      top:40px;
+      top:30px;
 
       width:420px;
       height:420px;
@@ -274,11 +326,11 @@
       background:
         radial-gradient(
           circle,
-          rgba(76,151,255,.22) 0%,
+          rgba(79,156,255,.18) 0%,
           transparent 72%
         );
 
-      filter:blur(45px);
+      filter:blur(50px);
 
       z-index:-1;
     }
@@ -290,7 +342,7 @@
       position:absolute;
 
       right:-120px;
-      bottom:-60px;
+      bottom:-50px;
 
       width:420px;
       height:420px;
@@ -298,11 +350,11 @@
       background:
         radial-gradient(
           circle,
-          rgba(154,124,255,.18) 0%,
+          rgba(156,125,255,.18) 0%,
           transparent 72%
         );
 
-      filter:blur(50px);
+      filter:blur(55px);
 
       z-index:-1;
     }
@@ -317,11 +369,11 @@
 
       border:1px solid rgba(255,255,255,.92);
 
-      border-radius:30px;
+      border-radius:32px;
 
-      padding:32px;
+      padding:34px;
 
-      backdrop-filter:blur(10px);
+      backdrop-filter:blur(12px);
 
       box-shadow:var(--shadow);
 
@@ -339,7 +391,7 @@
       background:
         linear-gradient(
           180deg,
-          rgba(255,255,255,.36),
+          rgba(255,255,255,.35),
           transparent 35%
         );
 
@@ -376,7 +428,7 @@
 
       line-height:1.95;
 
-      color:#4f5f77;
+      color:#4f6077;
 
       margin-bottom:26px;
     }
@@ -422,7 +474,7 @@
 
       margin-top:20px;
 
-      color:#627089;
+      color:#66758d;
 
       font-size:12px;
 
@@ -452,7 +504,7 @@
 
       border:1px solid var(--border);
 
-      color:#425066;
+      color:#445268;
 
       font-size:13px;
 
@@ -495,6 +547,11 @@
         padding:70px 18px;
       }
 
+      .brand-row{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
       .name{
         font-size:48px;
       }
@@ -509,7 +566,7 @@
 
       .btn{
         width:100%;
-        text-align:center;
+        justify-content:center;
       }
     }
 
@@ -529,9 +586,86 @@
         SOFTWARE ENGINEER • FULL STACK • AI SYSTEMS
       </div>
 
-      <div class="name">
-        Rashi Gupta
+      <div class="brand-row">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+          <svg
+            width="68"
+            height="68"
+            viewBox="0 0 68 68"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+
+            <rect
+              width="68"
+              height="68"
+              rx="22"
+              fill="url(#paint0_linear)"
+            />
+
+            <path
+              d="M21 45V23H33C39 23 42 26 42 31C42 35 39 38 34 38H28V45H21ZM28 33H32C34.5 33 35.8 32 35.8 30.2C35.8 28.4 34.5 27.3 32 27.3H28V33Z"
+              fill="white"
+            />
+
+            <path
+              d="M47 45C41 45 37 41 37 34C37 27 41.2 23 47 23C50.3 23 53 24.1 55 26.5L50.8 30.2C49.8 29 48.5 28.4 47 28.4C43.8 28.4 41.8 30.5 41.8 34C41.8 37.5 43.8 39.6 47 39.6C48.6 39.6 50 39 51 37.7V36H46.5V31.5H56V40C53.8 43.1 50.7 45 47 45Z"
+              fill="white"
+            />
+
+            <defs>
+
+              <linearGradient
+                id="paint0_linear"
+                x1="0"
+                y1="0"
+                x2="68"
+                y2="68"
+                gradientUnits="userSpaceOnUse"
+              >
+
+                <stop stop-color="#347EFF"/>
+                <stop offset="1" stop-color="#785FF0"/>
+
+              </linearGradient>
+
+            </defs>
+
+          </svg>
+
+        </div>
+
+        <!-- NAME -->
+
+        <div>
+
+          <div class="name">
+            Rashi Gupta
+          </div>
+
+          <div class="role-line">
+
+            <span>
+              Building AI-powered systems
+            </span>
+
+            <span class="dot"></span>
+
+            <span>
+              Product Engineering
+            </span>
+
+          </div>
+
+        </div>
+
       </div>
+
+      <!-- INTRO -->
 
       <p>
         Full Stack Engineer focused on building
@@ -540,6 +674,8 @@
         clean architecture, performance, and production-ready workflows.
       </p>
 
+      <!-- ACTIONS -->
+
       <div class="actions">
 
         <a
@@ -547,7 +683,20 @@
           href="https://github.com/rxz33"
           target="_blank"
         >
+
+          <!-- GITHUB ICON -->
+
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M12 .5C5.6.5.5 5.8.5 12.3c0 5.2 3.4 9.6 8.1 11.1.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.1.1 1.8 1.2 1.8 1.2 1 .1 1.6-.8 2-.2.1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.4-5.5-6 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 016 0C17 4 18 4.3 18 4.3c.6 1.6.2 2.9.1 3.2.8.9 1.2 2 1.2 3.3 0 4.7-2.8 5.7-5.5 6 .4.3.8 1 .8 2v3c0 .3.2.7.8.6a11.8 11.8 0 008.1-11.1C23.5 5.8 18.4.5 12 .5z"/>
+          </svg>
+
           GitHub
+
         </a>
 
         <a
@@ -555,7 +704,20 @@
           href="https://www.linkedin.com/in/rashi-gupta-09b828310/"
           target="_blank"
         >
+
+          <!-- LINKEDIN ICON -->
+
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.48 1s2.5 1.12 2.5 2.5zM0 8h5v16H0V8zm7.5 0h4.7v2.2h.1c.7-1.3 2.4-2.7 4.9-2.7 5.2 0 6.2 3.4 6.2 7.8V24h-5v-7.3c0-1.7 0-4-2.5-4s-2.8 1.9-2.8 3.8V24h-5V8z"/>
+          </svg>
+
           LinkedIn
+
         </a>
 
         <a
