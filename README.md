@@ -1,47 +1,65 @@
 # Rashi Gupta
 
-Full Stack Developer focused on building scalable web applications, AI-powered systems, and modern digital products.
+**Full Stack Engineer · AI Systems · Product Engineering**
 
-Experienced in developing end-to-end applications using React, Next.js, TypeScript, Node.js, FastAPI, and cloud-based deployment workflows. Strong interest in applied AI, system design, and product engineering.
+I build practical web products and AI-powered systems with a focus on clean user experiences, reliable backend workflows, and software that solves a real problem.
 
-## GitHub Activity
+My work spans **React, Next.js, TypeScript, FastAPI, Node.js, PostgreSQL, and AI/LLM integrations**. I enjoy taking an idea from product thinking to a working, deployed application.
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=RashiGupta33&show_icons=true&include_all_commits=true&hide_border=true&theme=default" alt="Rashi Gupta GitHub Statistics" height="180" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RashiGupta33&layout=compact&langs_count=8&hide_border=true&theme=default" alt="Rashi Gupta Most Used Languages" height="180" />
-</p>
+## What I Build
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=RashiGupta33&theme=minimal&hide_border=true&area=true" alt="Rashi Gupta GitHub Contribution Graph" />
-</p>
-
-## Core Technologies
-
-- React
-- Next.js
-- TypeScript
-- Tailwind CSS
-- Node.js
-- FastAPI
-- MongoDB
-- PostgreSQL
-- Gemini AI
-- Git & GitHub
+- AI-powered products with useful, explainable workflows
+- Full-stack applications with modern frontend and backend architecture
+- APIs, data-driven systems, and production-ready integrations
+- Developer-focused tools that turn complex workflows into simple experiences
 
 ## Selected Work
 
-### AI Career Guidance System
+### [AI Career Guidance System](https://pathwise-ai-career-guidance-ii0gkawoe.vercel.app/)
+AI-driven career guidance platform using adaptive questioning, evaluation workflows, and LLM-powered personalization.
 
-An AI-driven platform designed to provide personalized career recommendations through aptitude analysis, adaptive questioning, and intelligent evaluation workflows.
+**Stack:** React · FastAPI · Gemini API
 
-### AI Interview Generator
+### [AI Interview Generator](https://myinterq.vercel.app/)
+AI-powered interview platform that creates role-specific interview experiences with dynamic question generation and assessment flows.
 
-A platform that generates role-specific interview experiences using AI-based question generation and dynamic assessment flows.
+**Stack:** React · APIs · AI Integration
 
-### Spendora
+### [Spendora](https://spendora-ai-spend-audit-6f65j1ncn.vercel.app/)
+A SaaS platform designed to identify software and AI tooling cost-optimization opportunities through structured, explainable recommendations.
 
-A SaaS platform focused on identifying software cost optimization opportunities for teams and businesses.
+**Stack:** Next.js · TypeScript · Supabase · PostgreSQL
 
-## Contact
+### [AI-First CRM](https://ai-crm-hcp.vercel.app/)
+Conversational CRM for structured interaction logging, compliance validation, and AI-assisted follow-up workflows.
 
-GitHub: https://github.com/RashiGupta33
+**Stack:** React · FastAPI · LangGraph · Groq · SQLite
+
+## Core Technologies
+
+**Frontend**  
+React · Next.js · TypeScript · Tailwind CSS
+
+**Backend**  
+FastAPI · Node.js · REST APIs
+
+**Data**  
+PostgreSQL · MongoDB · SQLite · Supabase
+
+**AI**  
+Gemini · Groq · LangGraph · LLM APIs · AI Workflows
+
+**Engineering**  
+Git · GitHub · Docker · Deployment · Product Engineering
+
+## Currently Focused On
+
+Building stronger backend systems, improving system-design fundamentals, and turning AI integrations into reliable production workflows.
+
+## Connect
+
+[GitHub](https://github.com/RashiGupta33) · [LinkedIn](https://www.linkedin.com/in/rashi-gupta-09b828310/) · [Portfolio](https://github.com/RashiGupta33/portfolio)
+
+---
+
+*Build useful things. Keep learning. Ship better.*
