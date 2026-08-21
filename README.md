@@ -30,4 +30,4 @@ A SaaS platform focused on identifying software cost optimization opportunities 
 
 ## Contact
 
-GitHub: https://github.com/rxz33
+GitHub: https://github.com/RashiGupta33
