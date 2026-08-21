@@ -449,6 +449,67 @@
     font-weight:700;
   }
 
+
+  /* =========================
+     GITHUB ACTIVITY
+  ========================= */
+
+  .github-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .github-card {
+    background: rgba(255,255,255,.82);
+    border: 1px solid rgba(255,255,255,.94);
+    border-radius: 32px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: .25s ease;
+  }
+
+  .github-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--hover);
+  }
+
+  .github-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .github-contributions {
+    margin-top: 24px;
+  }
+
+  .github-profile-link {
+    display: inline-flex;
+    margin-top: 20px;
+    padding: 11px 18px;
+    border-radius: 14px;
+    background: #f8fbff;
+    border: 1px solid var(--border);
+    color: #1f2c40;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .2s ease;
+  }
+
+  .github-profile-link:hover {
+    background: white;
+    border-color: #89b7ff;
+  }
+
+  @media (max-width: 760px) {
+    .github-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
 </style>
 
 </head>
@@ -457,6 +518,7 @@
 
   <div class="container">
 
+```
 <section class="hero">
 
   <div class="badge">
@@ -689,6 +751,51 @@
 
 </section>
 
+
+<section class="section">
+
+  <div class="section-title">
+    GitHub Activity
+  </div>
+
+  <div class="github-grid">
+
+    <div class="github-card">
+      <img
+        src="https://github-readme-stats.vercel.app/api?username=RashiGupta33&show_icons=true&include_all_commits=true&hide_border=true&bg_color=ffffff00&title_color=3556f5&text_color=526276&icon_color=6d4df0"
+        alt="Rashi Gupta GitHub Statistics"
+      />
+    </div>
+
+    <div class="github-card">
+      <img
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=RashiGupta33&layout=compact&langs_count=8&hide_border=true&bg_color=ffffff00&title_color=3556f5&text_color=526276"
+        alt="Rashi Gupta Most Used Programming Languages"
+      />
+    </div>
+
+  </div>
+
+  <div class="github-card github-contributions">
+
+    <img
+      src="https://github-readme-activity-graph.vercel.app/graph?username=RashiGupta33&bg_color=ffffff00&color=3556f5&line=6d4df0&point=3556f5&area=true&hide_border=true"
+      alt="Rashi Gupta GitHub Contribution Activity"
+    />
+
+    <a
+      class="github-profile-link"
+      href="https://github.com/RashiGupta33"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View GitHub Profile →
+    </a>
+
+  </div>
+
+</section>
+
 <section class="section">
 
   <div class="section-title">
@@ -752,6 +859,7 @@
   </div>
 
 </footer>
+```
 
   </div>
 
